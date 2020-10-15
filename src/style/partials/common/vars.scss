@@ -1,0 +1,115 @@
+// ШРИФТЫ
+font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot');
+  src: local('HelveticaNeueCyr-Medium'),
+    url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Heavy.eot');
+  src: local('HelveticaNeueCyr-Heavy'),
+    url('../fonts/HelveticaNeueCyr-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Heavy.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-UltraLight.eot');
+  src: local('HelveticaNeueCyr-UltraLight'),
+    url('../fonts/HelveticaNeueCyr-UltraLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-UltraLight.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot');
+  src: local('HelveticaNeueCyr-Roman'),
+    url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Bold.eot');
+  src: local('HelveticaNeueCyr-Bold'),
+    url('../fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Light.eot');
+  src: local('HelveticaNeueCyr-Light'),
+    url('../fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('../fonts/HelveticaNeueCyr-Thin.eot');
+  src: local('HelveticaNeueCyr-Thin'),
+    url('../fonts/HelveticaNeueCyr-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+$mainFonts: 'HelveticaNeueCyr';
+
+// ЖИРНОСТЬ
+$thin: 100;
+$ultraLight: 200;
+$light: 300;
+$normal: normal;
+$medium: 550;
+$bold: bold;
+$heavy: 900;
+
+// РАЗМЕРЫ ШРИФТОВ
+$smallSize: 14px;
+$mainSize: 15px;
+$blockHeadingSize: 20px;
+$textHeadingSize: 22px;
+$headingSize: 30px;
+
+// ЦВЕТА
+$whiteMain: #fff;
+$bgGray: #f4f4fb;
+$textGray: #bfbfd2;
+$textGray2: #858588;
+$textGray3: #9c9da7;
+$btnGray: #d6d6e3;
+$borderGray: #dfdfe4;
+$borderBlack: #525b63;
+$blackMain: #2c2c32;
+$blackText: #2a2d34;
+$blackBg: #2d363f;
+$blue: #01539f;
+$bgBlue: #263e73;
+$bgBlue2: #197ddb;
+$mailBlue: #35b6ff;
+$svgBlue: #486be7;
+$blueText: #afbede;
+$svgRed: #fe4f4f;

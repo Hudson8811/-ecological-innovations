@@ -1,0 +1,217 @@
+.footer {
+  box-sizing: border-box;
+  padding: 64px 0 32px;
+  background-color: $blackBg;
+
+  &-container {
+  }
+
+  &-row {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    .footer-col {
+      width: auto;
+      &:first-child {
+        box-sizing: border-box;
+        width: 31.4%;
+        padding-right: 7.2%;
+      }
+    }
+
+    &:first-child {
+      padding-bottom: 56px;
+      border-bottom: 1px solid $borderBlack;
+
+      .footer-col:not(:first-child) {
+        max-width: 201px;
+        margin-right: auto;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &:last-child {
+      padding-top: 24px;
+
+      .footer-col:first-child {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+
+  &-menu {
+    &-heading {
+      display: block;
+      margin-bottom: 30px;
+      font-weight: $medium;
+      line-height: 150%;
+      color: $whiteMain;
+    }
+
+    &-item {
+      & + & {
+        margin-top: 15px;
+      }
+    }
+    &-link {
+      display: block;
+      font-size: $smallSize;
+      line-height: 150%;
+      color: $textGray3;
+      text-decoration: none;
+
+      &:hover {
+        color: $whiteMain;
+      }
+    }
+  }
+
+  &-address {
+    &-item {
+      display: block;
+      font-size: 15px;
+      line-height: 135%;
+      color: $whiteMain;
+      text-decoration: none;
+
+      &--gray {
+        color: $textGray3;
+      }
+
+      &:last-child {
+        margin-top: 8px;
+      }
+    }
+
+    &-phone {
+      margin-top: 30px;
+    }
+
+    &-mail {
+      margin-top: 8px;
+      margin-bottom: 30px;
+
+      &:hover {
+        color: $mailBlue;
+      }
+    }
+  }
+
+  &-logo-link {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  &-heading {
+    display: block;
+    margin-bottom: 24px;
+    font-weight: $medium;
+    line-height: 135%;
+    color: $whiteMain;
+  }
+
+  &-desc {
+    display: block;
+    font-weight: $normal;
+    font-size: $smallSize;
+    line-height: 150%;
+    color: $textGray3;
+  }
+
+  &-copy {
+    display: block;
+
+    & + & {
+      margin-left: 48px;
+    }
+
+    &:first-child {
+      max-width: 151px;
+    }
+
+    &:last-child {
+      max-width: 58px;
+    }
+  }
+
+  &-social {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-item {
+      & + & {
+        margin-left: 20px;
+      }
+    }
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        .footer-social-svg {
+          path {
+            fill: $whiteMain;
+          }
+        }
+      }
+    }
+  }
+
+  &-politics-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: $normal;
+    font-size: $smallSize;
+    line-height: 135%;
+    color: $textGray3;
+    text-decoration: none;
+
+    &:hover {
+      color: $whiteMain;
+    }
+  }
+
+  &-copyright {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: auto;
+
+    &-title {
+      display: block;
+      margin-right: 30px;
+      font-weight: $normal;
+      font-size: $textGray3;
+      line-height: 135%;
+      color: $textGray3;
+    }
+
+    &-link {
+      max-width: 104px;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &-img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
