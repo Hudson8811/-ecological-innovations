@@ -19,3 +19,13 @@ body {
 .main {
   min-height: 50vh;
 }
+
+.section-title {
+  display: block;
+  font-weight: $medium;
+  font-size: $headingSize;
+  line-height: 135%;
+  /* or 41px */
+  text-align: center;
+  color: $blackMain;
+}

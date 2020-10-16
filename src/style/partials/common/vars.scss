@@ -76,6 +76,8 @@ font-face {
   font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 $mainFonts: 'HelveticaNeueCyr';
 
 // ЖИРНОСТЬ
@@ -93,6 +95,8 @@ $mainSize: 15px;
 $blockHeadingSize: 20px;
 $textHeadingSize: 22px;
 $headingSize: 30px;
+$bannerPagSize1: 40px;
+$bannerPagSize2: 160px;
 
 // ЦВЕТА
 $whiteMain: #fff;
@@ -101,6 +105,7 @@ $textGray: #bfbfd2;
 $textGray2: #858588;
 $textGray3: #9c9da7;
 $btnGray: #d6d6e3;
+$btnGrayHover: #eaeaf8;
 $borderGray: #dfdfe4;
 $borderBlack: #525b63;
 $blackMain: #2c2c32;
@@ -113,3 +118,4 @@ $mailBlue: #35b6ff;
 $svgBlue: #486be7;
 $blueText: #afbede;
 $svgRed: #fe4f4f;
+$moreBtnHover: #f1f1fa;
