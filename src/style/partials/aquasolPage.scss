@@ -1,0 +1,270 @@
+.aquasol-page {
+  .section-title {
+    text-align: left;
+  }
+}
+
+.sed_ut {
+  .horizon-text {
+    max-width: 708px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: -32px;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(50% - 20px);
+    margin-bottom: 32px;
+  }
+
+  &-icon {
+    display: block;
+    margin-right: 10px;
+  }
+
+  &-text {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 2px;
+  }
+}
+
+.aqua_images {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 56px;
+  margin-bottom: -20px;
+
+  &-item {
+    display: block;
+    width: calc(50% - 10px);
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  &-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    max-width: 200px;
+    margin-top: -64px;
+    margin-left: -100px;
+  }
+}
+
+.aquasol-how_do {
+  .horizon-text {
+    max-width: 745px;
+  }
+
+  .how_do {
+    &-icon {
+      background-color: $aquasolBlue;
+    }
+
+    &-svg {
+      height: 50%;
+      width: 50%;
+      object-fit: contain;
+    }
+  }
+}
+
+.numbers {
+  margin-top: 80px;
+
+  .section-title {
+    margin-bottom: 56px;
+  }
+
+  &-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: -72px;
+  }
+
+  &-item {
+    display: block;
+    box-sizing: border-box;
+    width: calc(33.333% - 154px / 3);
+    padding-top: 30px;
+    margin-right: 77px;
+    margin-bottom: 72px;
+    border-top: 1px solid $borderGray;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &-text {
+    display: block;
+    font-weight: $normal;
+    font-size: $textHeadingSize;
+    line-height: 135%;
+    letter-spacing: 0.05em;
+    color: $aquasolBlue;
+  }
+
+  &-bit-text {
+    font-weight: $medium;
+    font-size: $bannerPagSize4;
+  }
+
+  &-desc {
+    display: block;
+    margin-top: 32px;
+    font-weight: $normal;
+    font-size: $smallSize;
+    line-height: 150%;
+    color: $blackMain;
+  }
+}
+
+.compare {
+  margin-top: 80px;
+
+  .section-title {
+    margin: 80px 0 40px;
+  }
+
+  .horizon-text {
+    max-width: 774px;
+  }
+
+  &-block {
+    margin-top: 48px;
+  }
+}
+
+.cb {
+  &-title_row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  &-title_col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+
+    &:first-child {
+      width: calc(50% - 24px);
+      background-color: $aquasolBlue;
+    }
+
+    &:last-child {
+      width: calc(50% + 24px);
+      font-weight: $medium;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: $aquasolRed;
+      background-color: $bgGray;
+    }
+  }
+
+  &-row {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 20px 24px;
+    border: 2px solid $bgGray;
+    border-bottom-width: 0;
+
+    &:last-child {
+      border-bottom-width: 2px;
+    }
+
+    &:nth-child(2n + 1) {
+      background-color: $cbGray;
+    }
+
+    &:nth-child(3) {
+      background-color: transparent;
+    }
+  }
+
+  &-col {
+    box-sizing: border-box;
+    padding-right: 40px;
+
+    &:first-child {
+      width: calc(50% - 24px);
+      border-right: 1px solid $borderGray;
+    }
+
+    &:last-child {
+      width: calc(50% + 24px);
+      padding-left: 24px;
+    }
+  }
+
+  &-icon {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &-text {
+    font-weight: $medium;
+    font-size: $smallSize;
+    line-height: 150%;
+    color: $blackMain;
+  }
+
+  &-list {
+    display: block;
+
+    &-title {
+      display: block;
+      font-weight: $medium;
+      font-size: $smallSize;
+      line-height: 150%;
+      color: $blackMain;
+    }
+
+    li:not(.cb-list-title) {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-weight: $normal;
+      font-size: $smallSize;
+      line-height: 150%;
+      color: $blackMain;
+
+      &:before {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 4px;
+        margin-top: 9px;
+        margin-right: 7px;
+        border-radius: 2px;
+        background-color: $blackMain;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

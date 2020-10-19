@@ -79,6 +79,7 @@ font-face {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 $mainFonts: 'HelveticaNeueCyr';
+$ubuntu: 'Ubuntu', sans-serif;
 
 // ЖИРНОСТЬ
 $thin: 100;
@@ -90,12 +91,18 @@ $bold: bold;
 $heavy: 900;
 
 // РАЗМЕРЫ ШРИФТОВ
+$extraSmallSize: 12px;
+$extraSmallSize2: 13px;
 $smallSize: 14px;
 $mainSize: 15px;
+$horSize: 16px;
+$descSize: 18px;
 $blockHeadingSize: 20px;
 $textHeadingSize: 22px;
 $headingSize: 30px;
 $bannerPagSize1: 40px;
+$bannerPagSize3: 50px;
+$bannerPagSize4: 52px;
 $bannerPagSize2: 160px;
 
 // ЦВЕТА
@@ -119,3 +126,17 @@ $svgBlue: #486be7;
 $blueText: #afbede;
 $svgRed: #fe4f4f;
 $moreBtnHover: #f1f1fa;
+$tag: #ededf2;
+$horisonBg: #e5e5e5;
+$borderBlue: #1263ae;
+$sidebarBlue: #005db4;
+$categoryBlue: #a2c7ff;
+$subCategoryBlue: #00d1ff;
+$ell: #cb9e5a;
+$svgBorder: #3d464f;
+$howDesc: #f0f6ff;
+$borderBlueHor: #e3e4eb;
+$horDesc: #323340;
+$aquasolBlue: #2884dc;
+$aquasolRed: #d72638;
+$cbGray: #fafafd;

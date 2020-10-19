@@ -1,0 +1,50 @@
+.spheres {
+  margin-top: 80px;
+
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+    margin-top: 48px;
+    margin-bottom: -20px;
+  }
+
+  &-item {
+    position: relative;
+    height: 228px;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  &-img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
+    width: calc(100% - 65px);
+    padding: 22px;
+    background-color: $aquasolBlue;
+    font-weight: $medium;
+    line-height: 150%;
+    color: $whiteMain;
+  }
+}
+
+.aquasol_two-page {
+  .aquasol-how_do {
+    margin-top: 0;
+  }
+}
