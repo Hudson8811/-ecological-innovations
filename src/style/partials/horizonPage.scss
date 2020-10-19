@@ -7,6 +7,13 @@
   line-height: 135%;
   color: $whiteMain;
 
+  &-abs_logo {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    display: block;
+  }
+
   &-wrapper {
     max-width: 625px;
   }
@@ -14,10 +21,13 @@
   &-block {
     position: relative;
     box-sizing: border-box;
-    padding: 130px 0 166px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    .container {
+      padding: 130px 0 166px;
+    }
   }
 
   &-desc {
