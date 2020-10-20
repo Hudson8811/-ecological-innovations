@@ -172,21 +172,21 @@ $(document).ready(function () {
     // Слайдер отчетов!
 
         // Тулзы слайдера отчетов!
-        $('.reports-arrow-next').click(function(e){
+        $('.reports .reports-arrow-next').click(function(e){
             e.preventDefault()
             $('.reports-slider').slick("slickNext")
         })
     
-        $('.reports-arrow-prev').click(function(e){
+        $('.reports .reports-arrow-prev').click(function(e){
             e.preventDefault()
             $('.reports-slider').slick("slickPrev")
         })
 
-        const lengthReportsSlides =$('.reports-item').length / 4
-        $('.reports-pag-count_all').text(lengthReportsSlides)
+        const lengthReportsSlides =$('.reports .reports-item').length / 4
+        $('.reports .reports-pag-count_all').text(lengthReportsSlides)
         $('.reports-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
             let reportsSlidePosition =  Math.ceil((nextSlide + 3) / 4)
-            $('.reports-pag-count').text(reportsSlidePosition)
+            $('.reports  .reports-pag-count').text(reportsSlidePosition)
           });
         // Тулзы слайдера отчетов!
     
@@ -213,29 +213,58 @@ $(document).ready(function () {
         })
         // Форма!
 
-    // Маска телефона!
-    // Маска телефона!
+        // Scope слайдер!
+        $('.scope-slider').slick({
+            infinite: false,
+            autoplay: false,
+            rows:2,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            arrows:false,
+            dots: false,
+        });
 
-    // Фиксация сайдбара!
-    // function fixedSidebar(){
-    //     const topPositionSidebar = $('.header').height()
-    //     const rightPositionSidebar = $('.content').offset().left
-    //     if($('.content').offset().top - $('.header').height() - $(window).scrollTop() < 0){
-    //         $('.sidebar-wrapper').css({
-    //             position:'fixed',
-    //             top: `${topPositionSidebar}px`,
-    //             right: `${rightPositionSidebar}px`
+        $('.scope .reports-arrow-next').click(function(e){
+            e.preventDefault()
+            $('.scope-slider').slick("slickNext")
+        })
+    
+        $('.scope .reports-arrow-prev').click(function(e){
+            e.preventDefault()
+            $('.scope-slider').slick("slickPrev")
+        })
 
-    //         })
-    //     } else{
-    //         $('.sidebar-wrapper').attr('style', '')
-    //     }
-    // }
+        const lengthScopeSlides =$('.scope .scope-item').length / 4
+        $('.scope .reports-pag-count_all').text(lengthScopeSlides)
+        $('.scope-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            let scopeSlidePosition =  Math.ceil((nextSlide + 2) / 2)
+            $('.scope .reports-pag-count').text(scopeSlidePosition)
+            console.log(nextSlide)
+        });
+        // Scope слайдер!
 
-    // fixedSidebar()
+        // Табы!
+        $('.tabs-title').click(function(e){
+            const $this = $(this)
+            const tabId = $this.data('id')
+            e.preventDefault()
+            $('.tabs-title').removeClass('tabs-title--active')
+            $this.addClass('tabs-title--active')
+            $('.tabs-content-block').removeClass('tabs-content-block--active')
+            $(`.tabs-content-block[data-id="${tabId}"]`).addClass('tabs-content-block--active')
+        })
+        // Табы!
 
-    // $(window).scroll(function () {
-    //     fixedSidebar()
-    // });
-    // Фиксация сайдбара!
+        // Селект!
+        $('.form-input-select').click(function(){
+           $(this).parent('.form-label').addClass('form-label-select--active form-label--active')
+        })
+
+        $('.form-input-select-content-item').click(function(){
+            const $this = $(this)
+            const selectValue = $this.text()
+            $this.parent('.form-input-select-content').siblings('.form-input-select').text(selectValue)
+            $this.parents('.form-label').removeClass('form-label-select--active')
+        })
+        // Селект!
 });

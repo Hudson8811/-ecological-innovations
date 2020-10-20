@@ -1,0 +1,241 @@
+.greenox-page {
+  .h-title-block {
+    padding: 30px 0;
+  }
+}
+
+.greenox-desc-item {
+  display: block;
+  box-sizing: border-box;
+  padding: 40px 40px 48px 34px;
+  margin-top: 56px;
+  font-weight: $medium;
+  line-height: 150%;
+  color: $whiteMain;
+  border-left: 6px solid $lightGreen2;
+  background-color: $greenoxGreen;
+}
+
+.bacteria {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 56px;
+
+  &-item {
+    width: 100px;
+  }
+
+  &-img {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &-text {
+    display: block;
+    text-align: center;
+    font-weight: $normal;
+    line-height: 150%;
+    color: $blackMain;
+  }
+}
+
+.adv_greenox {
+  margin-top: 80px;
+
+  &-block {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 72px 64px 33px;
+    margin-top: 55px;
+    background-color: $greenoxGreen;
+  }
+
+  &-item {
+    position: relative;
+    z-index: 2;
+    width: 45%;
+    max-width: 288px;
+    margin-right: 10%;
+    margin-bottom: 55px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  &-svg {
+    display: block;
+    height: 64px;
+    margin-bottom: 24px;
+  }
+
+  &-text {
+    display: block;
+    font-weight: $medium;
+    font-size: $smallSize;
+    line-height: 150%;
+    color: $whiteMain;
+  }
+
+  &-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    max-width: 242px;
+  }
+}
+
+.disinfectants {
+  margin-top: 80px;
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .horizon-text {
+    margin-bottom: 42px;
+  }
+
+  &-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    border: 2px solid $bgGray;
+
+    &:not(:first-child) {
+      border-top: none;
+    }
+
+    &--active {
+      background-color: $tabsBgGreen;
+
+      .disinfectants-col {
+        color: $lightGreen2;
+      }
+
+      .disinfectants-col--logo {
+        svg {
+          display: block;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &-col {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(69.6% / 3);
+    padding: 19px 24px;
+    font-weight: $medium;
+    line-height: 150%;
+    color: $blackMain;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 14px;
+      right: 0;
+      width: 1px;
+      height: calc(100% - 28px);
+      background-color: $disiGray;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      justify-content: flex-start;
+      width: 30.4%;
+    }
+  }
+
+  &-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &-row {
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:first-child {
+        width: 100%;
+
+        .disinfectants-heading-col {
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      &:last-child {
+        .disinfectants-heading-col {
+          box-sizing: border-box;
+          text-transform: none;
+          text-align: center;
+          justify-content: center;
+          height: 100%;
+          width: 33.333%;
+          padding: 0 24px;
+          font-weight: $medium;
+          font-size: $extraSmallSize2;
+          line-height: 135%;
+          color: $whiteMain;
+          border-right: 1px solid rgba(255, 255, 255, 0.3);
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+
+    &-col {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      font-weight: $medium;
+      line-height: 150%;
+      color: $whiteMain;
+      background-color: $lightGreen;
+
+      &:first-child {
+        justify-content: flex-start;
+        width: 30.4%;
+        padding: 0 24px;
+        text-transform: uppercase;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      &:last-child {
+        width: 69.6%;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.greenox-page2 {
+  .how_do {
+    margin-top: 0;
+  }
+}

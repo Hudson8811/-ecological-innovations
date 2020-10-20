@@ -376,6 +376,7 @@ body {
     max-width: 144px;
     padding: 0;
     margin: 0;
+    font-size: $mainSize;
     border: none;
     font-weight: normal;
     line-height: 150%;
@@ -479,6 +480,18 @@ body {
   }
 }
 
+.reviews-horizon--green.reviews-horizon {
+  .reviews-slider-item {
+    .reviews-quotes path {
+      fill: $svgGreen;
+    }
+
+    .reviews-link {
+      color: $svgGreen;
+    }
+  }
+}
+
 .form_wrapper.form_wrapper--blue {
   .form-submit,
   .form-conf-fake_input:before {
@@ -486,5 +499,97 @@ body {
   }
   .form-conf-link {
     color: $aquasolBlue;
+  }
+}
+
+.form_wrapper.form_wrapper--green,
+.form-submit-block--green {
+  .form-submit,
+  .form-conf-fake_input:before {
+    background-color: $svgGreen;
+  }
+  .form-conf-link {
+    color: $svgGreen;
+  }
+}
+
+.form_wrapper.form_wrapper--light_green,
+.form-submit-block--light_green {
+  .form-submit,
+  .form-conf-fake_input:before {
+    background-color: $lightGreen;
+  }
+  .form-conf-link {
+    color: $lightGreen;
+  }
+}
+
+.app_horizon--green {
+  .app_horizon-text_wrapper {
+    background-color: $svgGreen;
+  }
+}
+
+.sed_ut--light_green {
+  .sed_ut-icon {
+    path {
+      fill: $lightGreen;
+    }
+  }
+}
+
+.scope--light_green {
+  .scope-text {
+    .scope-desc {
+      max-width: 298px;
+    }
+    background-color: $lightGreen;
+  }
+
+  .reports-arrow:hover .reports-arrow-svg path {
+    fill: $lightGreen;
+  }
+}
+
+.scope--green {
+  .scope-text {
+    .scope-desc {
+      max-width: 298px;
+    }
+    background-color: $svgGreen;
+  }
+
+  .reports-arrow:hover .reports-arrow-svg path {
+    fill: $svgGreen;
+  }
+}
+
+.reviews-horizon--light_green.reviews-horizon {
+  .reviews-slider-item {
+    .reviews-quotes path {
+      fill: $lightGreen;
+    }
+
+    .reviews-link {
+      color: $lightGreen;
+    }
+  }
+}
+
+.reports--light_green {
+  .reports-arrow:hover .reports-arrow-svg path {
+    fill: $lightGreen;
+  }
+}
+
+.reports--green {
+  .reports-arrow:hover .reports-arrow-svg path {
+    fill: $svgGreen;
+  }
+}
+
+.app_horizon--light_green {
+  .app_horizon-text_wrapper {
+    background-color: $lightGreen;
   }
 }

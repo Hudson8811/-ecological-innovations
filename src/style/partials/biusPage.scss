@@ -1,0 +1,388 @@
+.sed_ut--green {
+  .sed_ut-item {
+    .sed_ut-icon {
+      path {
+        fill: $svgGreen;
+      }
+    }
+  }
+}
+
+.how_do--green {
+  .how_do-icon {
+    background-color: $svgGreen;
+  }
+}
+
+.how_desc--green {
+  .how_desc-link {
+    color: $svgGreen;
+  }
+}
+
+.advantages {
+  margin-top: 80px;
+
+  .section-title {
+    margin-bottom: 48px;
+  }
+
+  &-tooltip {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    padding-top: 2px;
+    margin-left: 10px;
+    font-weight: $normal;
+    font-size: $extraSmallSize2;
+    line-height: 16px;
+    border-radius: 50%;
+    color: $whiteMain;
+    background-color: $svgGreen;
+    flex-shrink: 0;
+  }
+
+  &-row {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: stretch;
+    border: 2px solid $bgGray;
+    border-top: none;
+
+    &:first-child {
+      border-bottom: none;
+    }
+  }
+
+  &-col {
+    text-align: center;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 16px;
+    font-weight: $normal;
+    font-size: $smallSize;
+    line-height: 135%;
+    color: $blackMain;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      right: 0;
+      display: block;
+      height: calc(100% - 28px);
+      width: 1px;
+      background-color: $borderTable;
+    }
+
+    &:first-child {
+      text-align: left;
+      justify-content: flex-start;
+      width: 31.7%;
+      padding-left: 26px;
+      font-weight: $medium;
+    }
+
+    &:nth-child(2) {
+      width: 13.5%;
+    }
+
+    &:nth-child(3) {
+      width: 18.3%;
+    }
+
+    &:nth-child(4) {
+      width: 17.2%;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:nth-child(5) {
+      justify-content: space-between;
+      text-align: left;
+      width: 19.3%;
+      font-weight: $medium;
+      color: $svgGreen;
+      background-color: $tableBgGreen;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &-heading_row {
+    .advantages-col {
+      justify-content: flex-start;
+      text-align: left;
+      font-weight: $medium;
+
+      &:not(:last-child) {
+        background-color: $bgGray;
+      }
+
+      &:last-child {
+        color: $whiteMain;
+        background-color: $svgGreen;
+      }
+    }
+  }
+}
+
+.scope {
+  margin-top: 80px;
+
+  .slick-list {
+    margin-right: -20px;
+  }
+
+  .section-title {
+    margin-bottom: 48px;
+  }
+
+  &-item {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding-right: 20px;
+    height: 228px;
+    margin-bottom: 18px;
+
+    &:hover {
+      .scope-text {
+        max-height: 100%;
+        max-width: calc(100% - 20px);
+      }
+
+      .scope-desc {
+        display: block;
+      }
+    }
+  }
+
+  &-img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 65px;
+    width: 100%;
+    max-width: calc(100% - 72px);
+    padding: 24px;
+    background-color: $svgGreen;
+    transition: 0.5s;
+  }
+
+  &-title {
+    display: block;
+    font-weight: $medium;
+    line-height: 150%;
+    color: $whiteMain;
+  }
+
+  &-desc {
+    display: none;
+    box-sizing: border-box;
+    padding-top: 16px;
+    max-width: 222px;
+    font-weight: $normal;
+    line-height: 150%;
+    color: $whiteMain;
+    transition: 0.5s;
+  }
+
+  .reports-tools {
+    margin-top: 0;
+  }
+}
+
+.tabs {
+  margin-top: 80px;
+
+  &-block {
+    margin-top: 56px;
+  }
+
+  &-heading-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  &-title {
+    display: block;
+    box-sizing: border-box;
+    width: 33.333333%;
+    padding: 26px 0;
+    font-weight: $normal;
+    font-size: $descSize;
+    line-height: 135%;
+    text-align: center;
+    text-decoration: none;
+    color: $blackMain;
+    border: 1px solid $borderGray;
+    border-bottom: none;
+
+    &:not(:first-child) {
+      border-left: none;
+    }
+
+    &--active {
+      padding-top: 15px;
+      font-weight: $medium;
+      border: none;
+      border-top: 11px solid $svgGreen;
+      color: $tabsLinkGreen;
+      background: $tabsBgGreen;
+    }
+  }
+
+  &-content-block {
+    display: none;
+    box-sizing: border-box;
+    padding: 48px 72px 56px 48px;
+    background: $tabsBgGreen;
+
+    &--active {
+      display: block;
+    }
+  }
+  &-text {
+    font-weight: 500;
+    line-height: 150%;
+    color: $tabsTextGray;
+  }
+}
+
+.calc {
+  margin-top: 80px;
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .horizon-text {
+    margin-bottom: 40px;
+  }
+
+  &-form-text {
+  }
+
+  &-form-desc {
+    font-weight: $normal;
+    line-height: 150%;
+    color: $textGray2;
+  }
+
+  &-form-sum {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: $normal;
+    font-size: $blockHeadingSize;
+    color: $blackMain;
+
+    &-count {
+      font-weight: $medium;
+      color: $svgGreen;
+    }
+  }
+}
+
+.form {
+  &-sublabel {
+    width: calc(50% - 16px);
+
+    .form-label {
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+
+  &-placeholder-arrow {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -5px;
+  }
+
+  &-input-select {
+    cursor: pointer;
+
+    &-content {
+      position: absolute;
+      top: 100%;
+      left: -1px;
+      z-index: 10;
+      display: none;
+      width: 100%;
+      font-weight: $normal;
+      font-size: $extraSmallSize2;
+      line-height: 150%;
+      color: $textGray2;
+      background-color: $whiteMain;
+      border: 1px solid $borderGray;
+
+      &-item {
+        display: block;
+        box-sizing: border-box;
+        padding: 10px 16px;
+        cursor: pointer;
+
+        &:hover {
+          font-weight: $medium;
+        }
+      }
+    }
+  }
+}
+
+.form-label-select--active {
+  .form-input-select-content {
+    display: block;
+  }
+
+  .form-placeholder-arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.form-label-select {
+  .form-input-select {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.bius-page2 {
+  .how_do {
+    margin-top: 0;
+  }
+
+  .app_horizon-text {
+    padding-right: 20%;
+  }
+}
