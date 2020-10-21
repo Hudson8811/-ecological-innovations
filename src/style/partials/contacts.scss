@@ -1,0 +1,269 @@
+.contacts-page {
+  background-color: $bgGray;
+
+  .section-title {
+    text-align: left;
+  }
+}
+
+.map {
+  width: 55%;
+
+  &-block {
+    padding-top: 48px;
+
+    &-wrap {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: flex-start;
+      align-items: stretch;
+      padding: 32px 24px;
+      margin-top: 48px;
+      background-color: $whiteMain;
+    }
+  }
+
+  &-info {
+    width: 45%;
+
+    &-block {
+      & + & {
+        margin-top: 40px;
+      }
+    }
+
+    &-label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: $normal;
+      line-height: 135%;
+      color: $textGray2;
+    }
+
+    &-link {
+      display: block;
+      font-weight: $normal;
+      line-height: 135%;
+      color: $blackMain;
+      text-decoration: none;
+    }
+
+    &-mail {
+      display: block;
+      font-weight: $normal;
+      line-height: 135%;
+      text-decoration-line: underline;
+      color: $blue;
+    }
+
+    &-cons_link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      width: 100%;
+      max-width: 231px;
+      margin-top: 65px;
+      font-weight: $normal;
+      line-height: 150%;
+      text-decoration: none;
+      color: $whiteMain;
+      background-color: $blue;
+    }
+
+    .header-social {
+      margin-top: 40px;
+    }
+  }
+}
+
+.representative {
+  margin-top: 80px;
+
+  &-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    margin-bottom: -20px;
+  }
+
+  &-item {
+    display: block;
+    box-sizing: border-box;
+    width: calc(33.333% - 40px / 3);
+    padding: 32px 32px 48px 24px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: $whiteMain;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &-addres {
+    display: block;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: $blockHeadingSize;
+    line-height: 135%;
+    color: $blackMain;
+    border-bottom: 1px solid $tag;
+  }
+
+  &-fio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  &-ava {
+    display: block;
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &-name {
+    display: block;
+    max-width: 219px;
+    font-weight: 500;
+    line-height: 135%;
+    color: $blackMain;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .map-info-link {
+      font-weight: $bold;
+    }
+
+    .map-info-block + .map-info-block {
+      margin-top: 0;
+      margin-left: 25px;
+    }
+  }
+}
+
+.doc {
+  padding-bottom: 120px;
+  margin-top: 80px;
+
+  &-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 48px;
+  }
+
+  &-content {
+    display: block;
+    box-sizing: border-box;
+    width: 66%;
+    padding: 32px 107px 32px 24px;
+    background-color: $whiteMain;
+  }
+
+  &-item {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $tag;
+
+    &:last-child {
+      padding: 0;
+      border: none;
+    }
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &-title {
+    display: block;
+    box-sizing: border-box;
+    width: 45%;
+    max-width: 300px;
+    padding-right: 70px;
+    font-weight: $medium;
+    line-height: 135%;
+    color: $textGray2;
+    flex-shrink: 0;
+  }
+
+  &-desc {
+    display: block;
+    font-weight: $normal;
+    line-height: 150%;
+    color: $blackMain;
+
+    & + & {
+      margin-top: 10px;
+    }
+  }
+
+  &-side {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: calc(34% - 20px);
+    padding: 48px 24px 57px 24px;
+    margin-left: auto;
+    background-color: $whiteMain;
+
+    &-link {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-bottom: 32px;
+      text-decoration: none;
+      border-bottom: 1px solid $tag;
+
+      &:last-child {
+        padding-bottom: 0;
+        border: none;
+      }
+
+      & + & {
+        margin-top: auto;
+      }
+    }
+
+    &-img {
+      display: block;
+      margin-right: 24px;
+      flex-shrink: 0;
+    }
+
+    &-title {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      line-height: 18px;
+      color: $blackMain;
+    }
+
+    &-desc {
+      display: block;
+      font-weight: $normal;
+      font-size: $smallSize;
+      line-height: 150%;
+      color: $textGray2;
+    }
+  }
+}

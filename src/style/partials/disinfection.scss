@@ -1,0 +1,260 @@
+.disinf-page {
+  .section-title {
+    text-align: left;
+  }
+
+  .app_horizon-text_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .calc-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0;
+
+    .calc-form-content {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+      width: calc(100% - 401px);
+      padding: 48px 68px 40px 40px;
+    }
+
+    .calc-form-sum-count {
+      color: $lightGreen;
+    }
+
+    .calc-form-submit-title {
+      display: block;
+      margin-bottom: 40px;
+      font-weight: $bold;
+      line-height: 150%;
+      color: $blackMain;
+    }
+
+    .form-submit {
+      background-color: $lightGreen;
+    }
+
+    .form-submit-block {
+      .calc-form-text {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .calc-form-sum + .calc-form-sum {
+          margin-left: 32px;
+        }
+      }
+    }
+
+    .calc-form-submit-wrapper {
+      box-sizing: border-box;
+      width: 401px;
+      padding: 54px 54px 48px 51px;
+      background-color: $tag;
+    }
+  }
+}
+
+.sed_ut-block--w33 {
+  .sed_ut-item {
+    width: calc(33.333% - 138px / 3);
+  }
+}
+
+.app_horizon--w25 {
+  .app_horizon-catalog {
+    .app_horizon-item {
+      width: calc(25% - 60px / 4);
+    }
+  }
+}
+
+.types_disinf {
+  margin-top: 80px;
+
+  .section-title {
+    margin-bottom: 48px;
+  }
+
+  &-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &-item {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(33.333% - 40px / 3);
+    padding-top: 45px;
+  }
+
+  &-icon {
+    position: absolute;
+    top: 0;
+    left: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91px;
+    width: 91px;
+    border-radius: 50%;
+    background-color: $greenoxGreen;
+  }
+
+  &-text {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 78px 61px 48px 32px;
+    background-color: $bgGray;
+  }
+
+  &-title {
+    display: block;
+    max-width: 170px;
+    margin-bottom: 24px;
+    font-weight: $medium;
+    font-size: $descSize;
+    line-height: 135%;
+    color: $blackMain;
+  }
+
+  &-desc {
+    display: block;
+    font-weight: $normal;
+    line-height: 150%;
+    color: $blackMain;
+  }
+}
+
+.greenox_hlor {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 56px 208px 86px 64px;
+
+  &-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    max-width: 201px;
+  }
+
+  &-text {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 23px;
+    font-weight: $medium;
+    font-size: $descSize;
+    line-height: 150%;
+    color: $whiteMain;
+  }
+
+  &-logos {
+    width: 261px;
+    margin-right: 80px;
+    flex-shrink: 0;
+  }
+
+  &-logo {
+    display: block;
+    width: 100%;
+    margin-bottom: 54px;
+  }
+
+  &-link {
+    display: block;
+    text-align: center;
+    font-weight: $medium;
+    font-size: descSize;
+    line-height: 150%;
+    text-decoration-line: underline;
+    color: $whiteMain;
+  }
+}
+
+.how_desc-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 32px;
+
+  .how_desc {
+    width: calc(50% - 10px);
+    margin-top: 0;
+  }
+}
+
+.reports-big {
+  .reports-item {
+    height: 294px;
+  }
+}
+
+.develop {
+  margin-top: 80px;
+
+  .section-title {
+    margin-bottom: 72px;
+  }
+
+  &-catalog {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: -56px;
+  }
+
+  &-item {
+    box-sizing: border-box;
+    width: 33.333%;
+    padding-right: 11%;
+    margin-right: auto;
+    margin-bottom: 56px;
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66px;
+    width: 66px;
+    margin-bottom: 32px;
+    border-radius: 50%;
+    background-color: $lightGreen;
+  }
+
+  &-title {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: $medium;
+    font-size: $descSize;
+    line-height: 150%;
+    color: $blackMain;
+  }
+
+  &-desc {
+    display: block;
+    font-weight: $normal;
+    line-height: 150%;
+    color: $blackMain;
+  }
+}
+
+.reviews-horizon--w33 {
+  .reviews-slider-item {
+    width: calc(33.333% - 40px / 3);
+  }
+}

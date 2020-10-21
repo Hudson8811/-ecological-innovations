@@ -267,4 +267,23 @@ $(document).ready(function () {
             $this.parents('.form-label').removeClass('form-label-select--active')
         })
         // Селект!
+
+        // Вопросы!
+        $(document).on('click', '.qua-title-block', function(){
+            const $this = $(this)
+            if(!$this.parent('.qua-block').hasClass('qua-block--active')){
+                $('.qua-block').removeClass('qua-block--active')
+                $('.qua-content-block').slideUp()
+                $this.parent('.qua-block').addClass('qua-block--active')
+                $this.siblings('.qua-content-block').slideDown()
+            } else{
+                $this.parent('.qua-block').removeClass('qua-block--active')
+                $this.siblings('.qua-content-block').slideUp()
+            }
+        })
+        // Вопросы!
+
+        // Галерея!
+        $('[data-fancybox="gallery"]').fancybox();
+        // Галерея!
 });

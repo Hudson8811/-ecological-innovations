@@ -1,0 +1,88 @@
+.documents-page {
+  .section-title {
+    margin-top: 48px;
+  }
+
+  .filters {
+    margin: 56px 0;
+  }
+}
+
+.documents {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: -20px;
+  padding-bottom: 120px;
+
+  &-item {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 403px;
+    width: calc(25% - 60px / 4);
+    padding: 24px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: $whiteMain;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &-serf {
+    display: block;
+    width: 100%;
+    max-width: 155px;
+    margin-bottom: 16px;
+  }
+
+  &-desc {
+    display: block;
+    font-weight: $normal;
+    font-size: $smallSize;
+    line-height: 135%;
+    color: $blackMain;
+  }
+
+  &-mark {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 16px;
+    margin-top: auto;
+    border-top: 1px solid $borderGray;
+    font-weight: $normal;
+    line-height: 135%;
+    color: $black;
+    text-decoration: none;
+
+    &--green {
+      color: $svgGreen;
+    }
+
+    &--blue {
+      color: $aquasolBlue;
+    }
+
+    &--light_green {
+      color: $greenoxGreen;
+    }
+
+    &--dark_blue {
+      color: $blue;
+    }
+  }
+
+  &-fancy {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: block;
+  }
+}
