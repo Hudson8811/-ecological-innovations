@@ -258,5 +258,12 @@ $(document).ready(function () {
         // Галерея!
         $('[data-fancybox="gallery"]').fancybox();
         // Галерея!
+
+        // Слайдер ответственность!
+        $('.resp-slider').slick({
+            prevArrow: '<div class="resp-arrow prev"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.236151 6.53947L7.68805 -3.36055e-07L9 1.15132L2.33528 7L9 12.8487L7.68805 14L0.236151 7.46053C-0.0787175 7.16118 -0.0787175 6.81579 0.236151 6.53947Z" fill="white"/></svg></div>',
+            nextArrow: '<div class="resp-arrow next"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.76385 6.53947L1.31195 -3.36055e-07L-3.9204e-07 1.15132L6.66472 7L-9.03349e-07 12.8487L1.31195 14L8.76385 7.46053C9.07872 7.16118 9.07872 6.81579 8.76385 6.53947Z" fill="white"/></svg></div>',
+        })
+        // Слайдер ответственность!
 });
 

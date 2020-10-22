@@ -140,6 +140,19 @@
   }
 }
 
+.list {
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 4px;
+    width: 4px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: $blackMain;
+  }
+}
+
 .pages-content {
   padding-bottom: 120px;
 
@@ -156,19 +169,6 @@
 
   img + p {
     margin-top: 48px;
-  }
-
-  b.list {
-    &:before {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      height: 4px;
-      width: 4px;
-      margin-right: 5px;
-      border-radius: 50%;
-      background-color: $blackMain;
-    }
   }
 
   .page-desc-banner {
