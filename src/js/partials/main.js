@@ -265,5 +265,44 @@ $(document).ready(function () {
             nextArrow: '<div class="resp-arrow next"><svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.76385 6.53947L1.31195 -3.36055e-07L-3.9204e-07 1.15132L6.66472 7L-9.03349e-07 12.8487L1.31195 14L8.76385 7.46053C9.07872 7.16118 9.07872 6.81579 8.76385 6.53947Z" fill="white"/></svg></div>',
         })
         // Слайдер ответственность!
+
+        // Поиск!
+        $('.header-search-icon').click(function(){
+            const $search = $('.header-search-input')
+            if(!$search.hasClass('header-search-input--active')){
+                $search.addClass('header-search-input--active')
+                $search.focus()
+            } else{
+                $search.removeClass('header-search-input--active')
+            }
+        })
+        // Поиск!
+
+        // Меню!
+        $('.header-menu-link').click(function(e){
+            const $this = $(this)
+            e.preventDefault()
+            if(!$this.hasClass('header-menu-link--active')){
+                const headerId = $this.data('id')
+                $('.header-menu-link').removeClass('header-menu-link--active')
+                $this.addClass('header-menu-link--active')
+                $('.big_menu').addClass('big_menu--active')
+                $('.big_menu-wrap').removeClass('big_menu-wrap--active')
+                $(`.big_menu-wrap[data-id="${headerId}"]`).addClass('big_menu-wrap--active')
+            } else{
+                $this.removeClass('header-menu-link--active')
+                $('.big_menu').removeClass('big_menu--active')
+            }
+        })
+
+        $(document).on('click', '.big_menu-link', function(e){
+            e.preventDefault()
+            const filterId = $(this).data('filter')
+            $('.big_menu-link').removeClass('big_menu-link--active')
+            $(this).addClass('big_menu-link--active')
+            $('.big_menu-content').removeClass('big_menu-content--active')
+            $(`.big_menu-content[data-filter="${filterId}"]`).addClass('big_menu-content--active')
+        })
+        // Меню!
 });
 
