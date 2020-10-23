@@ -14,6 +14,10 @@ body {
   width: calc(100% - 80px);
   max-width: 1240px;
   margin: 0 auto;
+
+  @include for-phone {
+    width: calc(100% - 30px);
+  }
 }
 
 .main {
@@ -28,6 +32,10 @@ body {
   /* or 41px */
   text-align: center;
   color: $blackMain;
+
+  @include for-bigPhone {
+    font-size: $textHeadingSize;
+  }
 }
 
 .bread_crumbs {
@@ -39,6 +47,10 @@ body {
     box-sizing: border-box;
     padding: 25px 0 16px;
     border-bottom: 1px solid $borderGray;
+
+    @include for-bigPhone {
+      padding: 15px 0;
+    }
   }
 
   &-item {
@@ -87,6 +99,10 @@ body {
     position: relative;
     width: 295px;
     flex-shrink: 0;
+
+    @include for-tablet {
+      display: none;
+    }
 
     .section-title {
       text-align: left;
@@ -264,9 +280,14 @@ body {
 .content {
   display: block;
   box-sizing: border-box;
-  width: 100%;
+  width: calc(100% - 295px);
   max-width: 945px;
   padding-right: 125px;
+
+  @include for-tablet {
+    width: 100%;
+    padding-right: 0;
+  }
 
   &-wrapper {
     position: relative;
@@ -300,22 +321,44 @@ body {
   margin-top: 40px;
   background-color: $bgGray;
 
+  @include for-fablet {
+    display: block;
+    padding: 24px 16px;
+    margin-top: 32px;
+  }
+
   &-label {
     &:first-child,
     &:nth-child(3) {
       width: 33.6%;
+
+      @include for-fablet {
+        width: 100%;
+      }
     }
 
     &:nth-child(2) {
       width: calc(66.4% - 32px);
+
+      @include for-fablet {
+        width: 100%;
+      }
     }
 
     &:nth-child(4) {
       width: 20%;
+
+      @include for-fablet {
+        width: 100%;
+      }
     }
 
     &:nth-child(5) {
       width: calc(46.4% - 64px);
+
+      @include for-fablet {
+        width: 100%;
+      }
     }
   }
 
@@ -327,6 +370,10 @@ body {
     margin-bottom: 24px;
     background-color: $whiteMain;
     border: 1px solid $borderGray;
+
+    @include for-fablet {
+      margin-bottom: 16px;
+    }
 
     &--active {
       .form-placeholder {
@@ -392,6 +439,10 @@ body {
       width: 100%;
       padding-top: 32px;
       border-top: 1px solid $borderGray;
+
+      @include for-fablet {
+        display: block;
+      }
     }
   }
 
@@ -399,6 +450,10 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @include for-fablet {
+      margin-bottom: 32px;
+    }
 
     &-label {
       position: relative;

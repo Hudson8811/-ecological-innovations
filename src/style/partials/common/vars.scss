@@ -101,6 +101,7 @@ $blockHeadingSize: 20px;
 $textHeadingSize: 22px;
 $headingSize: 30px;
 $bannerPagSize1: 40px;
+$bannerPagSize5: 42px;
 $bannerPagSize3: 50px;
 $bannerPagSize4: 52px;
 $bannerPagSize2: 160px;
@@ -153,3 +154,52 @@ $disiGray: #e9e9ee;
 $black: #000;
 $bigMenuGray: #9d9dad;
 $bigMenuGray2: #46464f;
+$mobileBorder: #525b63;
+
+@mixin for-desktop {
+  @media (min-width: 1111px) {
+    @content;
+  }
+}
+
+@mixin for-phone-desktop {
+  @media (min-width: 581px) {
+    @content;
+  }
+}
+
+@mixin for-xl {
+  @media (max-width: 1530px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (max-width: 1110px) {
+    @content;
+  }
+}
+
+@mixin for-fablet {
+  @media (max-width: 810px) {
+    @content;
+  }
+}
+
+@mixin for-bigPhone {
+  @media (max-width: 690px) {
+    @content;
+  }
+}
+
+@mixin for-phone {
+  @media (max-width: 580px) {
+    @content;
+  }
+}
+
+@mixin for-smallPhone {
+  @media (max-width: 340px) {
+    @content;
+  }
+}

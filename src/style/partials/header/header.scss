@@ -8,6 +8,11 @@
   background-color: $whiteMain;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 
+  @include for-tablet {
+    overflow: visible;
+    min-height: 116px;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -17,6 +22,10 @@
     height: 1px;
     width: calc(100vw - (100vw - 1385px) / 2 - 177px);
     background-color: $borderGray;
+
+    @include for-tablet {
+      top: 61px;
+    }
   }
 
   .container {
@@ -27,6 +36,22 @@
     position: relative;
     box-sizing: border-box;
     width: 100%;
+
+    @include for-xl {
+      padding-left: 145px;
+    }
+
+    @include for-tablet {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-left: 83px;
+    }
+
+    @include for-smallPhone {
+      padding-left: 72px;
+    }
   }
 
   &-container {
@@ -34,9 +59,13 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    width: 100%;
+    width: calc(100% - 80px);
     max-width: 1240px;
     margin: 0 auto;
+
+    @include for-phone {
+      width: calc(100% - 30px);
+    }
   }
 
   &-row {
@@ -49,14 +78,52 @@
     &:first-child {
       padding: 24px 0;
 
-      .header-col:nth-child(2) {
+      @include for-tablet {
+        position: static;
+        padding: 14px 0;
+
+        .header-col:nth-child(2) {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: flex;
+          box-sizing: border-box;
+          justify-content: flex-start;
+          align-items: center;
+          width: auto;
+          min-height: 64px;
+          padding: 14px 0;
+
+          @include for-phone {
+            top: auto;
+
+            .header-phone {
+              overflow: hidden;
+              height: 25px;
+              width: 25px;
+              color: transparent;
+              background: center / auto url(../img/phone.svg) no-repeat;
+            }
+          }
+        }
+      }
+
+      .header-col:nth-child(3) {
         margin-right: auto;
+
+        @include for-tablet {
+          display: none;
+        }
       }
 
       .header-col:last-child {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        @include for-tablet {
+          margin-left: auto;
+        }
       }
     }
 
@@ -64,14 +131,31 @@
       min-height: 70px;
       padding: 16px 0;
 
+      @include for-tablet {
+        min-height: 1px;
+        padding: 14px 0;
+      }
+
       .header-col:last-child {
         margin-left: auto;
         padding-left: 10px;
+
+        @include for-tablet {
+          display: none;
+        }
       }
 
       .header-col:nth-child(2) {
         width: 100%;
         max-width: 689px;
+
+        @include for-xl {
+          max-width: 500px;
+        }
+      }
+
+      @include for-tablet {
+        order: -1;
       }
     }
   }
@@ -87,15 +171,68 @@
     width: 145px;
     background-color: $blue;
     flex-shrink: 0;
+
+    @include for-xl {
+      left: 0;
+    }
+
+    @include for-tablet {
+      height: 61px;
+      width: 67px;
+
+      .header-logo-svg {
+        display: block;
+        width: 32px;
+      }
+    }
   }
 
-  &-col {
+  &-row:nth-child(2) {
     box-sizing: border-box;
 
-    &:first-child {
+    .header-col:first-child {
+      box-sizing: border-box;
       width: 339px;
       padding: 0 41px 0 32px;
       flex-shrink: 0;
+
+      @include for-xl {
+        width: 240px;
+        padding: 0 10px;
+      }
+
+      @include for-tablet {
+        padding: 0;
+      }
+
+      @include for-phone {
+        width: 100%;
+
+        .header-title {
+          font-size: $smallSize;
+        }
+      }
+    }
+  }
+
+  &-row:nth-child(1) {
+    box-sizing: border-box;
+
+    .header-col:nth-child(2) {
+      box-sizing: border-box;
+      width: 339px;
+      padding: 0 41px 0 32px;
+      flex-shrink: 0;
+
+      @include for-xl {
+        width: 240px;
+        padding: 0 10px;
+      }
+
+      @include for-tablet {
+        width: auto;
+        padding: 0;
+      }
     }
   }
 
@@ -172,6 +309,10 @@
     justify-content: flex-start;
     align-items: center;
 
+    @include for-phone {
+      display: none;
+    }
+
     &-item {
       display: flex;
       justify-content: center;
@@ -230,6 +371,10 @@
     line-height: 135%;
     text-decoration: none;
     color: $blue;
+
+    @include for-tablet {
+      font-size: $smallSize;
+    }
   }
 
   &-language {
@@ -243,6 +388,10 @@
     border-left: 1px solid $borderGray;
     border-right: 1px solid $borderGray;
 
+    @include for-phone {
+      display: none;
+    }
+
     &:hover {
       color: $blue;
     }
@@ -252,6 +401,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include for-phone {
+      margin-right: 64px;
+    }
 
     &-input {
       display: block;
@@ -271,6 +424,10 @@
         padding: 0 10px;
         margin-right: 20px;
         border-bottom: 1px solid $blackMain;
+
+        @include for-phone {
+          max-width: 120px;
+        }
       }
     }
 
@@ -307,6 +464,17 @@
   opacity: 0;
   transition: opacity 0.5s;
 
+  .container {
+    @include for-phone {
+      width: 100%;
+    }
+  }
+
+  @include for-tablet {
+    overflow: auto;
+    height: calc(100vh - 116px);
+  }
+
   &--active {
     z-index: 100;
     opacity: 1;
@@ -319,11 +487,19 @@
     flex-wrap: wrap;
     width: 100%;
     padding: 0;
-    background: transparent;
+
+    @include for-phone-desktop {
+      background: transparent;
+    }
 
     &-bigMenu-row {
       width: 310px;
       margin-right: 9%;
+
+      @include for-phone {
+        width: 100%;
+        margin-right: 0;
+      }
     }
 
     &-item {
@@ -334,18 +510,20 @@
       }
     }
 
-    .category-link {
-      color: $blackMain;
+    @include for-phone-desktop {
+      .category-link {
+        color: $blackMain;
 
-      &:hover {
-        font-weight: $medium;
+        &:hover {
+          font-weight: $medium;
 
-        .category-icon {
-          border-color: $bigMenuGray2;
+          .category-icon {
+            border-color: $bigMenuGray2;
 
-          &:before,
-          &:after {
-            background-color: $bigMenuGray2;
+            &:before,
+            &:after {
+              background-color: $bigMenuGray2;
+            }
           }
         }
       }
@@ -356,20 +534,22 @@
       padding-left: 32px;
     }
 
-    .sub_category-link {
-      padding-left: 12px;
-      line-height: 150%;
-      margin: 5px 0;
-      color: $blackMain;
-      border-left-width: 2px;
-    }
+    @include for-phone-desktop {
+      .sub_category-link {
+        padding-left: 12px;
+        line-height: 150%;
+        margin: 5px 0;
+        color: $blackMain;
+        border-left-width: 2px;
+      }
 
-    .category-icon {
-      border-color: $bigMenuGray;
+      .category-icon {
+        border-color: $bigMenuGray;
 
-      &:before,
-      &:after {
-        background-color: $bigMenuGray;
+        &:before,
+        &:after {
+          background-color: $bigMenuGray;
+        }
       }
     }
   }
@@ -390,6 +570,11 @@
 
     &--active {
       display: flex;
+
+      @include for-tablet {
+        display: block;
+        padding-top: 0;
+      }
     }
   }
 
@@ -398,6 +583,20 @@
     width: 250px;
     border-right: 1px solid $borderGray;
     flex-shrink: 0;
+
+    @include for-tablet {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      border-right: 0;
+      border-bottom: 1px solid $borderGray;
+    }
+
+    @include for-phone {
+      display: block;
+      border-bottom: 0;
+    }
   }
 
   &-link {
@@ -439,6 +638,15 @@
     border: 1px solid $borderGray;
     border-top: 0;
 
+    @include for-tablet {
+      width: 50%;
+      padding: 24px;
+    }
+
+    @include for-phone {
+      width: 100%;
+    }
+
     & + & {
       border-left: 0;
     }
@@ -449,10 +657,15 @@
 
     &:nth-child(n + 4) {
       border-bottom: 0;
+      border-bottom: 1px solid $borderGray;
     }
 
     &:nth-child(3n) {
       border-right: 0;
+
+      @include for-tablet {
+        border-right: 1px solid $borderGray;
+      }
     }
 
     &-logo {
@@ -472,5 +685,153 @@
       font-weight: $normal;
       font-size: $smallSize;
     }
+  }
+}
+
+.burger {
+  position: absolute;
+  left: 17px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  width: 30px;
+  cursor: pointer;
+
+  @include for-tablet {
+    display: flex;
+  }
+
+  &-item {
+    height: 3px;
+    width: 30px;
+    background-color: $blue;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 3px;
+      width: 30px;
+      background-color: $blue;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 3px;
+      width: 30px;
+      background-color: $blue;
+    }
+  }
+
+  &--active {
+    .burger-item {
+      background-color: transparent;
+
+      &:before {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &--active-bigMenu {
+    height: 30px;
+
+    .burger-item {
+      background-color: transparent;
+
+      &:before {
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        width: 15px;
+        margin-bottom: 9px;
+        margin-left: -7px;
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        top: 0;
+        left: 50%;
+        width: 15px;
+        margin-top: 9px;
+        margin-left: -7px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.header-col-menu {
+  @include for-tablet {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    display: none;
+    z-index: 100;
+
+    .header-menu {
+      flex-direction: column;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 375px;
+      background-color: $whiteMain;
+
+      &-item {
+        height: 63px;
+        width: 100%;
+      }
+
+      &-link {
+        position: relative;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 15px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          display: block;
+          height: 1px;
+          width: calc(100% - 30px);
+          background-color: $borderGray;
+        }
+
+        &--active {
+          font-weight: $medium;
+          line-height: 135%;
+          color: $whiteMain;
+          background-color: $blue;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--active {
+    display: flex;
   }
 }

@@ -7,6 +7,11 @@
   line-height: 135%;
   color: $whiteMain;
 
+  @include for-bigPhone {
+    margin-bottom: 24px;
+    font-size: $textHeadingSize;
+  }
+
   &-abs_logo {
     position: absolute;
     top: 48px;
@@ -16,6 +21,10 @@
 
   &-wrapper {
     max-width: 625px;
+
+    @include for-bigPhone {
+      max-width: 345px;
+    }
   }
 
   &-block {
@@ -27,6 +36,10 @@
 
     .container {
       padding: 130px 0 166px;
+
+      @include for-bigPhone {
+        padding: 84px 0 255px;
+      }
     }
   }
 
@@ -36,6 +49,10 @@
     font-size: $descSize;
     line-height: 150%;
     color: $whiteMain;
+
+    @include for-bigPhone {
+      font-size: $mainSize;
+    }
   }
 }
 
@@ -48,6 +65,10 @@
 .what_is {
   .section-title {
     margin-bottom: 40px;
+
+    @include for-bigPhone {
+      margin-bottom: 24px;
+    }
   }
 
   .horizon-text {
@@ -59,6 +80,11 @@
     justify-content: space-between;
     align-items: stretch;
     margin-top: 48px;
+
+    @include for-bigPhone {
+      display: block;
+      margin-top: 32px;
+    }
   }
 
   &-block {
@@ -69,6 +95,16 @@
     width: calc(50% - 10px);
     padding: 40px 32px 21px 19px;
     background-color: $blackBg;
+
+    @include for-bigPhone {
+      align-items: stretch;
+      width: 100%;
+      padding: 24px 24px 40px 20px;
+
+      & + & {
+        margin-top: 16px;
+      }
+    }
   }
 
   &-number {
@@ -84,6 +120,10 @@
     font-size: $bannerPagSize3;
     line-height: 100%;
     color: $ell;
+
+    @include for-bigPhone {
+      font-size: $bannerPagSize5;
+    }
   }
 
   &-desc {
@@ -92,6 +132,10 @@
     font-weight: $normal;
     line-height: 150%;
     color: $whiteMain;
+
+    @include for-bigPhone {
+      margin-top: 15px;
+    }
   }
 
   &-icon {
@@ -105,6 +149,11 @@
     padding-right: 22px;
     flex-shrink: 0;
 
+    @include for-bigPhone {
+      height: auto;
+      width: 70px;
+    }
+
     &:after {
       content: '';
       position: absolute;
@@ -114,6 +163,10 @@
       height: 132px;
       width: 1px;
       background-color: $svgBorder;
+
+      @include for-bigPhone {
+        height: 100%;
+      }
     }
   }
 
@@ -130,12 +183,26 @@
 .how_do {
   margin-top: 80px;
 
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
+
   .section-title {
     margin-bottom: 40px;
+
+    @include for-bigPhone {
+      margin-bottom: 24px;
+    }
   }
 
   .horizon-text {
     max-width: 708px;
+
+    @include for-bigPhone {
+      b {
+        display: block;
+      }
+    }
   }
 
   &-block {
@@ -145,6 +212,12 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: -32px;
+
+    @include for-bigPhone {
+      display: block;
+      margin-top: 32px;
+      margin-bottom: 0;
+    }
   }
 
   &-item {
@@ -153,6 +226,11 @@
     align-items: center;
     width: calc(50% - 36px);
     margin-bottom: 32px;
+
+    @include for-bigPhone {
+      width: 100%;
+      margin-bottom: 24px;
+    }
   }
 
   &-icon {
@@ -165,6 +243,12 @@
     background-color: $ell;
     border-radius: 50%;
     flex-shrink: 0;
+
+    @include for-bigPhone {
+      height: 56px;
+      width: 56px;
+      margin-right: 16px;
+    }
   }
 
   &-text {
@@ -184,9 +268,18 @@
   align-items: flex-start;
   background-color: $howDesc;
 
+  @include for-bigPhone {
+    padding: 20px 28px 32px 18px;
+    margin-top: 40px;
+  }
+
   &-texts {
     box-sizing: border-box;
     padding-left: 35px;
+
+    @include for-bigPhone {
+      padding-left: 16px;
+    }
   }
 
   &-text {
@@ -204,6 +297,10 @@
     text-decoration-line: underline;
     color: $blue;
 
+    @include for-bigPhone {
+      display: none;
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -219,14 +316,26 @@
 
   & + & {
     margin-top: 24px;
+
+    @include for-bigPhone {
+      margin-top: 16px;
+    }
   }
 }
 
 .app_horizon {
   margin-top: 80px;
 
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
+
   .section-title {
     margin-bottom: 48px;
+
+    @include for-bigPhone {
+      margin-bottom: 24px;
+    }
   }
 
   &-catalog {
@@ -235,6 +344,11 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: -20px;
+
+    @include for-bigPhone {
+      display: block;
+      margin-bottom: -16px;
+    }
   }
 
   &-item {
@@ -242,6 +356,11 @@
     width: calc(33.333333% - 40px / 3);
     margin-bottom: 20px;
     margin-right: 20px;
+
+    @include for-bigPhone {
+      width: 100%;
+      margin-bottom: 16px;
+    }
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -265,12 +384,20 @@
     line-height: 135%;
     color: $whiteMain;
 
+    @include for-bigPhone {
+      -webkit-line-clamp: 1;
+    }
+
     &_wrapper {
       box-sizing: border-box;
       height: 62px;
       width: 100%;
       padding: 12px 16px 16px;
       background-color: $ell;
+
+      @include for-bigPhone {
+        height: 47px;
+      }
     }
   }
 }
@@ -278,8 +405,16 @@
 .features {
   margin-top: 80px;
 
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
+
   .section-title {
     margin-bottom: 48px;
+
+    @include for-bigPhone {
+      margin-bottom: 24px;
+    }
   }
 
   &-block {
@@ -290,6 +425,11 @@
     flex-wrap: wrap;
     padding: 40px;
     background-color: $bgGray;
+
+    @include for-bigPhone {
+      padding: 16px;
+      justify-content: flex-start;
+    }
   }
 
   &-item {
@@ -300,6 +440,11 @@
     padding: 40px;
     border-right: 1px solid $borderBlueHor;
     border-bottom: 1px solid $borderBlueHor;
+
+    @include for-bigPhone {
+      width: 50%;
+      padding: 16px;
+    }
 
     &:after {
       content: '';
@@ -318,6 +463,12 @@
     &:nth-child(3n) {
       width: calc(33.333333% - 14px);
       border-right: 0;
+
+      @include for-bigPhone {
+        width: 50%;
+        padding-right: 16px;
+        border-right: 1px solid $borderBlueHor;
+      }
     }
 
     &:nth-child(n + 7) {
@@ -331,9 +482,10 @@
     &:nth-child(3n - 2) {
       width: calc(33.333333% - 14px);
       padding-left: 0;
-    }
 
-    &:nth-child(3n - 1) {
+      @include for-bigPhone {
+        width: 50%;
+      }
     }
 
     &:nth-child(3n) {
@@ -355,6 +507,44 @@
     &:nth-child(7) {
       padding-bottom: 0;
     }
+
+    @include for-bigPhone {
+      &:nth-child(3) {
+        padding-top: 16px;
+      }
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        padding-bottom: 16px;
+        border-bottom: 1px solid $borderBlueHor;
+      }
+
+      &:nth-child(2n) {
+        padding-left: 16px;
+        padding-right: 0;
+        border-right: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:nth-child(2n + 1) {
+        padding-left: 0;
+        padding-right: 16px;
+        border-left: 0;
+
+        &::after {
+          display: block;
+        }
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 
   &-count {
@@ -364,6 +554,10 @@
     font-size: $bannerPagSize3;
     line-height: 125%;
     color: $ell;
+
+    @include for-bigPhone {
+      font-size: $bannerPagSize5;
+    }
   }
 
   &-desc {
@@ -372,11 +566,19 @@
     font-size: $horSize;
     line-height: 150%;
     color: $horDesc;
+
+    @include for-bigPhone {
+      font-size: $smallSize;
+    }
   }
 }
 
 .reports {
   margin-top: 80px;
+
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
 
   &-slider {
     margin: 0 -10px;
@@ -384,6 +586,10 @@
 
   .section-title {
     margin-bottom: 48px;
+
+    @include for-bigPhone {
+      margin-bottom: 24px;
+    }
   }
 
   &-item {
@@ -476,8 +682,24 @@
 .reviews-horizon {
   margin-top: 80px;
 
+  .reports-tools {
+    display: none;
+
+    @include for-bigPhone {
+      display: flex;
+    }
+  }
+
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
+
   .section-title {
     margin-bottom: 48px;
+
+    @include for-bigPhone {
+      margin-bottom: 24px;
+    }
   }
 
   &-block {
@@ -497,6 +719,10 @@
     padding: 32px 40px 40px;
     margin-bottom: 20px;
     border: 1px solid $borderGray;
+
+    @include for-bigPhone {
+      padding: 24px;
+    }
 
     .reviews-link {
       color: $ell;
@@ -518,8 +744,16 @@
   &_wrapper {
     margin-top: 80px;
 
+    @include for-bigPhone {
+      margin-top: 48px;
+    }
+
     .section-title {
       margin-bottom: 40px;
+
+      @include for-bigPhone {
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -537,18 +771,34 @@
       &:first-child,
       &:nth-child(3) {
         width: 33.6%;
+
+        @include for-fablet {
+          width: 100%;
+        }
       }
 
       &:nth-child(2) {
         width: calc(66.4% - 32px);
+
+        @include for-fablet {
+          width: 100%;
+        }
       }
 
       &:nth-child(4) {
         width: 20%;
+
+        @include for-fablet {
+          width: 100%;
+        }
       }
 
       &:nth-child(5) {
         width: calc(46.4% - 64px);
+
+        @include for-fablet {
+          width: 100%;
+        }
       }
     }
   }
@@ -562,10 +812,24 @@
   padding-bottom: 88px;
   margin-top: 56px;
 
+  @include for-fablet {
+    padding-bottom: 0;
+    margin-top: 40px;
+  }
+
   &-item {
     width: calc(25% - 50px);
     margin-right: 50px;
     margin-bottom: 32px;
+
+    @include for-fablet {
+      width: calc(50% - 24px);
+      margin-right: 48px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
   }
 
   &-link {
@@ -576,6 +840,10 @@
     line-height: 135%;
     text-decoration: none;
     color: $blackMain;
+
+    @include for-fablet {
+      font-size: $horSize;
+    }
   }
 
   &-desc {
@@ -584,5 +852,9 @@
     font-size: $smallSize;
     line-height: 150%;
     color: $textGray2;
+
+    @include for-fablet {
+      font-size: $extraSmallSize2;
+    }
   }
 }

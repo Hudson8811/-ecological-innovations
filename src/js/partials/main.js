@@ -88,6 +88,7 @@ $(document).ready(function () {
         slidesToScroll: 3,
         arrows:false,
         dots: true,
+        
     });
     // Каталог отзывов!
 
@@ -139,7 +140,7 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 4,
         arrows:false,
-        dots: false,
+        dots: false, 
     });
     // Слайдер отчетов!
 
@@ -289,6 +290,7 @@ $(document).ready(function () {
                 $('.big_menu').addClass('big_menu--active')
                 $('.big_menu-wrap').removeClass('big_menu-wrap--active')
                 $(`.big_menu-wrap[data-id="${headerId}"]`).addClass('big_menu-wrap--active')
+                $('.burger').addClass('burger--active-bigMenu')
             } else{
                 $this.removeClass('header-menu-link--active')
                 $('.big_menu').removeClass('big_menu--active')
@@ -303,6 +305,73 @@ $(document).ready(function () {
             $('.big_menu-content').removeClass('big_menu-content--active')
             $(`.big_menu-content[data-filter="${filterId}"]`).addClass('big_menu-content--active')
         })
+
+        $('.burger').click(function(e){
+            e.preventDefault()
+            if(!$(this).hasClass('burger--active') && !$(this).hasClass('burger--active-bigMenu')){
+                $(this).addClass('burger--active')
+                $('.header-col-menu').addClass('header-col-menu--active')
+                $('.header-menu-link').removeClass('header-menu-link--active')
+            } else if ($(this).hasClass('burger--active') && !$(this).hasClass('burger--active-bigMenu')){
+                $(this).removeClass('burger--active')
+                $('.header-col-menu').removeClass('header-col-menu--active')
+                $('.header-menu-link').removeClass('header-menu-link--active')
+            }
+
+            if($(this).hasClass('burger--active-bigMenu')){
+                $(this).removeClass('burger--active-bigMenu')
+                $('.big_menu').removeClass('big_menu--active')
+                $('.header-menu-link').removeClass('header-menu-link--active')
+            }
+
+        })
         // Меню!
+
+        // Мобильные отзывы!
+        $('.reviews-horizon-block').slick({
+            infinite: false,
+            autoplay: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows:false,
+            dots:false
+
+        })
+
+                // Тулзы слайдера отчетов!
+                $('.reviews-horizon .reports-arrow-next').click(function(e){
+                    e.preventDefault()
+                    $('.reviews-horizon-block').slick("slickNext")
+                })
+            
+                $('.reviews-horizon .reports-arrow-prev').click(function(e){
+                    e.preventDefault()
+                    $('.reviews-horizon-block').slick("slickPrev")
+                })
+        
+                const lengthReviewsSlides =$('.reviews-slider-item').length
+                $('.reviews-horizon  .reports-pag-count_all').text(lengthReviewsSlides)
+                $('.reviews-horizon ').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                    let reviewsSlidePosition =  Math.ceil((nextSlide + 1))
+                    $('.reviews-horizon .reports-pag-count').text(reviewsSlidePosition)
+                  });
+                // Тулзы слайдера отчетов!
+
+
+        function reviewsSliding(){
+            if($(window).width() < 691){
+                $('.reviews-horizon-block').slick('init')
+            } else{
+                $('.reviews-horizon-block').slick('unslick')
+            }
+        }
+
+        reviewsSliding()
+
+        $(window).resize(function(){
+            reviewsSliding()
+        })
+        // Мобильные отзывы!
+
 });
 
