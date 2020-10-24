@@ -88,7 +88,23 @@ $(document).ready(function () {
         slidesToScroll: 3,
         arrows:false,
         dots: true,
-        
+        responsive: [
+            {
+              breakpoint: 1110,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              }
+            },
+
+            {
+                breakpoint: 690,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+              },
+          ]
     });
     // Каталог отзывов!
 
@@ -100,6 +116,25 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows:false,
         dots: false,
+        responsive: [
+            {
+              breakpoint: 1110,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+              }
+            },
+
+            {
+                breakpoint: 690,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1, 
+                  dots: true,
+                }
+              },
+          ]
     });
     // Новости!
 
@@ -137,10 +172,19 @@ $(document).ready(function () {
     $('.reports-slider').slick({
         infinite: false,
         autoplay: false,
-        slidesToShow: 4,
+        slidesToShow: 4, 
         slidesToScroll: 4,
         arrows:false,
         dots: false, 
+        responsive: [
+            {
+              breakpoint: 690,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+          ]
     });
     // Слайдер отчетов!
 
@@ -155,12 +199,30 @@ $(document).ready(function () {
             $('.reports-slider').slick("slickPrev")
         })
 
-        const lengthReportsSlides =$('.reports .reports-item').length / 4
-        $('.reports .reports-pag-count_all').text(lengthReportsSlides)
-        $('.reports-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-            let reportsSlidePosition =  Math.ceil((nextSlide + 3) / 4)
-            $('.reports  .reports-pag-count').text(reportsSlidePosition)
-          });
+        function reportsSliderControls(){
+            if ($(window).width() < 691){
+                const lengthReportsSlides =$('.reports .reports-item').length / 2
+                $('.reports .reports-pag-count_all').text(lengthReportsSlides)
+                $('.reports-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                    let reportsSlidePosition =  Math.ceil((nextSlide + 1) / 2)
+                $('.reports  .reports-pag-count').text(reportsSlidePosition)
+              });
+            } else{
+                const lengthReportsSlides =$('.reports .reports-item').length / 4
+                $('.reports .reports-pag-count_all').text(lengthReportsSlides)
+                $('.reports-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                    let reportsSlidePosition =  Math.ceil((nextSlide + 3) / 4)
+                $('.reports  .reports-pag-count').text(reportsSlidePosition)
+              });
+            }
+        }
+
+        reportsSliderControls()
+
+        $(window).resize(function(){
+            reportsSliderControls()
+        })
+        
         // Тулзы слайдера отчетов!
     
         // Видео!
@@ -212,8 +274,23 @@ $(document).ready(function () {
         $('.scope-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
             let scopeSlidePosition =  Math.ceil((nextSlide + 2) / 2)
             $('.scope .reports-pag-count').text(scopeSlidePosition)
-            console.log(nextSlide)
         });
+
+        function scopeSliderControl(){
+            if($(window).width() < 691){
+                $('.scope-slider').slick('unslick')
+
+                $('.scope-item:nth-child(n + 5)').addClass('scope-item--active')
+            } else{
+                $('.scope-slider').slick('init')
+            }
+        }
+
+        scopeSliderControl()
+
+        $(window).resize(function(){
+            scopeSliderControl()
+        })
         // Scope слайдер!
 
         // Табы!
@@ -354,7 +431,7 @@ $(document).ready(function () {
                 $('.reviews-horizon ').on('beforeChange', function(event, slick, currentSlide, nextSlide){
                     let reviewsSlidePosition =  Math.ceil((nextSlide + 1))
                     $('.reviews-horizon .reports-pag-count').text(reviewsSlidePosition)
-                  });
+                });
                 // Тулзы слайдера отчетов!
 
 
@@ -372,6 +449,116 @@ $(document).ready(function () {
             reviewsSliding()
         })
         // Мобильные отзывы!
+
+// Типы!
+        $('.types_disinf-block').slick({
+            infinite: false,
+            autoplay: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows:false,
+            dots:false
+        })
+
+        const lengthTypesSlides =$('.types_disinf-item').length
+        $('.types_disinf .reports-pag-count_all').text(lengthTypesSlides)
+        $('.types_disinf').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            let typesSlidePosition =  Math.ceil((nextSlide + 1))
+            $('.types_disinf  .reports-pag-count').text(typesSlidePosition)
+        });
+
+        $('.types_disinf .reports-arrow-next').click(function(e){
+            e.preventDefault()
+            $('.types_disinf-block').slick("slickNext")
+        })
+    
+        $('.types_disinf .reports-arrow-prev').click(function(e){
+            e.preventDefault()
+            $('.types_disinf-block').slick("slickPrev")
+        })
+
+        function typesSliding(){
+            if($(window).width() < 811){
+                $('.types_disinf-block').slick('init')
+            } else{
+                $('.types_disinf-block').slick('unslick')
+            }
+        }
+
+        typesSliding()
+
+        $(window).resize(function(){
+            typesSliding()
+        })
+// Типы!
+
+
+$('.develop-slider').slick({
+    infinite: false,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows:false,
+    dots:false
+})
+
+const lengthDevSlides =$('.develop-catalog').length
+$('.develop .reports-pag-count_all').text(lengthDevSlides)
+$('.develop-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    let devSlidePosition =  Math.ceil((nextSlide + 1))
+    $('.develop .reports-pag-count').text(devSlidePosition)
+});
+
+$('.develop .reports-arrow-next').click(function(e){
+    e.preventDefault()
+    $('.develop-slider').slick("slickNext")
+})
+
+$('.develop .reports-arrow-prev').click(function(e){
+    e.preventDefault()
+    $('.develop-slider').slick("slickPrev")
+})
+
+function devSliding(){
+    if($(window).width() < 691){
+        $('.develop-slider').slick('init')
+    } else{
+        $('.develop-slider').slick('unslick')
+    }
+}
+
+devSliding()
+
+$(window).resize(function(){
+    devSliding()
+})
+
+// Приоритеты!
+    $('.priorities-catalog').slick({
+        infinite: false,
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows:false,
+        dots: true,
+        
+    });
+
+    function prioritiesSliding(){
+        if($(window).width() < 811 && $(window).width() > 580 ){
+            $('.priorities-catalog').slick('init')
+        } else{
+            $('.priorities-catalog').slick('unslick')
+        }
+    }
+
+    prioritiesSliding()
+
+    $(window).resize(function(){
+        prioritiesSliding()
+    })
+// Приоритеты!
+
 
 });
 

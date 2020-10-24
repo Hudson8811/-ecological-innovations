@@ -10,6 +10,10 @@
 .shild {
   margin-top: 80px;
 
+  @include for-phone {
+    margin-top: 48px;
+  }
+
   &-flex {
     display: flex;
     justify-content: flex-start;
@@ -27,6 +31,18 @@
 
     &:nth-child(3n) {
       margin-right: 0;
+
+      @include for-bigPhone {
+        margin-right: 20px;
+      }
+    }
+
+    @include for-bigPhone {
+      width: calc(50% - 10px);
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -40,8 +56,16 @@
 .works {
   margin-top: 80px;
 
+  @include for-phone {
+    margin-top: 48px;
+  }
+
   .section-title {
     margin-bottom: 48px;
+
+    @include for-phone {
+      margin-bottom: 24px;
+    }
   }
 
   .horizon-text {
@@ -54,6 +78,11 @@
     box-sizing: border-box;
     padding: 23px 68px 48px 56px;
     background-color: $bgGray;
+
+    @include for-phone {
+      padding: 16px;
+      margin-bottom: 24px;
+    }
   }
 
   &-desc {
@@ -76,6 +105,10 @@
 
   .section-title {
     margin-bottom: 48px;
+
+    @include for-phone {
+      margin-bottom: 24px;
+    }
   }
 
   &-row {
@@ -103,6 +136,10 @@
     box-sizing: border-box;
     width: 50%;
     padding: 16px 24px;
+
+    @include for-phone {
+      padding: 10px;
+    }
 
     &:first-child {
       font-weight: $normal;
@@ -142,8 +179,16 @@
 .types_fil {
   margin-top: 80px;
 
+  @include for-phone {
+    margin-top: 46px;
+  }
+
   .section-title {
     margin-bottom: 48px;
+
+    @include for-phone {
+      margin-bottom: 24px;
+    }
   }
 
   &-flex {
@@ -152,6 +197,11 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: -20px;
+
+    @include for-fablet {
+      display: block;
+      margin-bottom: 0;
+    }
   }
 
   &-item {
@@ -162,6 +212,16 @@
 
     &:nth-child(2n) {
       margin-right: 0;
+
+      @include for-fablet {
+        margin-right: auto;
+      }
+    }
+
+    @include for-fablet {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -169,6 +229,12 @@
     display: block;
     width: 100%;
     mix-blend-mode: darken;
+
+    @include for-fablet {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     &-wrap {
       box-sizing: border-box;

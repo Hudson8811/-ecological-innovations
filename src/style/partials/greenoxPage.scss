@@ -14,6 +14,10 @@
   color: $whiteMain;
   border-left: 6px solid $lightGreen2;
   background-color: $greenoxGreen;
+
+  @include for-phone {
+    padding: 24px;
+  }
 }
 
 .bacteria {
@@ -22,14 +26,29 @@
   align-items: stretch;
   margin-top: 56px;
 
+  @include for-phone {
+    flex-wrap: wrap;
+  }
+
   &-item {
     width: 100px;
+
+    @include for-phone {
+      width: 33%;
+      margin-bottom: 40px;
+    }
   }
 
   &-img {
     display: block;
     width: 100%;
     margin-bottom: 24px;
+
+    @include for-phone {
+      max-width: 89px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &-text {
@@ -44,6 +63,10 @@
 .adv_greenox {
   margin-top: 80px;
 
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
+
   &-block {
     position: relative;
     display: flex;
@@ -53,6 +76,11 @@
     padding: 72px 64px 33px;
     margin-top: 55px;
     background-color: $greenoxGreen;
+
+    @include for-bigPhone {
+      padding: 24px 16px;
+      margin-top: 24px;
+    }
   }
 
   &-item {
@@ -65,6 +93,13 @@
 
     &:nth-child(2n) {
       margin-right: 0;
+    }
+
+    @include for-bigPhone {
+      width: 100%;
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 32px;
     }
   }
 
@@ -88,11 +123,19 @@
     right: 0;
     display: block;
     max-width: 242px;
+
+    @include for-bigPhone {
+      max-width: 177px;
+    }
   }
 }
 
 .disinfectants {
   margin-top: 80px;
+
+  @include for-bigPhone {
+    display: none;
+  }
 
   .section-title {
     margin-bottom: 40px;

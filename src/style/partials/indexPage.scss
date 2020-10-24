@@ -6,6 +6,10 @@
     height: 575px;
     background-color: $bgGray;
 
+    @include for-fablet {
+      height: auto;
+    }
+
     .slick-list,
     .slick-track {
       height: 100%;
@@ -24,6 +28,11 @@
         align-items: center;
         height: 100%;
         padding-bottom: 77px;
+
+        @include for-fablet {
+          position: static;
+          padding-bottom: 64px;
+        }
       }
     }
   }
@@ -37,6 +46,13 @@
     border-left: 8px solid $blue;
     background-color: $whiteMain;
 
+    @include for-fablet {
+      max-width: none;
+      padding: 48px 0 0;
+      background-color: $bgGray;
+      border: none;
+    }
+
     &-title {
       display: block;
       margin-bottom: 29px;
@@ -44,6 +60,14 @@
       font-size: $headingSize;
       line-height: 135%;
       color: $blackMain;
+
+      @include for-fablet {
+        text-align: center;
+        font-size: $textHeadingSize;
+        max-width: 345px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     &-desc {
@@ -51,6 +75,13 @@
       font-weight: $medium;
       line-height: 150%;
       color: $blackMain;
+
+      @include for-fablet {
+        text-align: center;
+        max-width: 345px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 
@@ -64,9 +95,27 @@
     text-transform: uppercase;
     color: $whiteMain;
 
+    @include for-fablet {
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
+      z-index: 2;
+      flex-direction: column;
+      max-width: 132px;
+      margin-left: -66px;
+      text-align: center;
+    }
+
     &-svg {
       display: block;
       margin-left: 24px;
+
+      @include for-fablet {
+        order: -1;
+        width: 80px;
+        margin-left: 0;
+        margin-bottom: 24px;
+      }
     }
   }
 
@@ -80,6 +129,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include for-fablet {
+      position: relative;
+      width: 100% !important;
+      height: 371px;
+      border-top: 8px solid $blue;
+    }
   }
 
   &-tools {
@@ -89,12 +145,23 @@
     width: 100%;
     max-width: 557px;
 
+    @include for-fablet {
+      max-width: none;
+      justify-content: center;
+    }
+
     &-wrapper {
       position: absolute;
       z-index: 3;
       left: 0;
       bottom: 0;
       width: 100%;
+
+      @include for-fablet {
+        top: 50%;
+        bottom: auto;
+        margin-top: -82px;
+      }
     }
 
     &-btns {
@@ -112,6 +179,10 @@
 
         &:hover {
           background-color: $textGray;
+
+          @include for-fablet {
+            background-color: $btnGray;
+          }
         }
       }
 
@@ -143,6 +214,50 @@
         .banner-tools-btns-next-svg {
           margin-left: 32px;
         }
+
+        @include for-fablet {
+          position: relative;
+          color: transparent;
+          overflow: hidden;
+          width: 56px;
+          height: 56px;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $btnGray;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            display: block;
+            width: 1px;
+            height: 36px;
+            background-color: #c8c8db;
+          }
+
+          .banner-tools-btns-next-svg {
+            position: absolute;
+            margin-left: 0;
+
+            path {
+              fill: $blue;
+            }
+          }
+
+          &:hover {
+            color: transparent;
+            background-color: $btnGray;
+
+            .banner-tools-btns-next-svg {
+              path {
+                fill: $blue;
+              }
+            }
+          }
+        }
       }
     }
     &-pags {
@@ -150,6 +265,11 @@
       justify-content: center;
       align-items: flex-start;
       font-family: 'Roboto', sans-serif;
+
+      @include for-fablet {
+        display: none;
+      }
+
       &-counts {
         display: block;
         margin-top: 40px;
@@ -177,10 +297,18 @@
   padding: 120px 0 45px;
   background-color: $whiteMain;
 
+  @include for-fablet {
+    padding: 0;
+  }
+
   &-line {
     content: '';
     position: absolute;
     height: 11px;
+
+    @include for-fablet {
+      display: none;
+    }
 
     &1 {
       top: 0;
@@ -209,6 +337,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include for-fablet {
+      align-items: stretch;
+      padding: 40px 0 46px;
+    }
   }
 
   &-img_wrapper {
@@ -216,6 +349,14 @@
     width: 50%;
     max-width: 557px;
     flex-shrink: 0;
+
+    @include for-fablet {
+      max-width: 311px;
+    }
+
+    @include for-bigPhone {
+      display: none;
+    }
 
     .about_us-img {
       display: block;
@@ -230,6 +371,15 @@
     box-sizing: border-box;
     max-width: 641px;
     padding-left: 8%;
+
+    @include for-fablet {
+      max-width: none;
+      padding-left: 34px;
+    }
+
+    @include for-bigPhone {
+      padding-left: 0;
+    }
   }
 
   &-title {
@@ -239,6 +389,11 @@
     font-size: $textHeadingSize;
     line-height: 150%;
     color: $blackMain;
+
+    @include for-fablet {
+      margin-bottom: 24px;
+      font-size: $descSize;
+    }
   }
 
   &-desc {
@@ -247,6 +402,10 @@
     font-weight: $normal;
     line-height: 150%;
     color: $blackMain;
+
+    @include for-fablet {
+      margin-bottom: 24px;
+    }
   }
 
   &-link {
@@ -276,6 +435,10 @@
     width: 39.1%;
     object-fit: cover;
     object-position: left;
+
+    @include for-fablet {
+      display: none;
+    }
   }
 }
 
@@ -284,6 +447,10 @@
   box-sizing: border-box;
   padding: 88px 0 80px;
   background-color: $bgGray;
+
+  @include for-tablet {
+    padding: 48px 0 64px;
+  }
 
   .section-title {
     margin-bottom: 48px;
@@ -312,6 +479,25 @@
     margin-bottom: 20px;
 
     &:nth-child(4n) {
+      margin-right: 0;
+
+      @include for-tablet {
+        margin-right: 0;
+      }
+    }
+
+    @include for-tablet {
+      width: calc(50% - 8px);
+      margin-bottom: 16px;
+      margin-right: 16px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include for-phone {
+      width: 100%;
       margin-right: 0;
     }
   }
@@ -414,9 +600,17 @@
   padding: 88px 0 104px;
   background-color: $bgBlue;
 
+  @include for-phone {
+    padding: 56px 0 72px;
+  }
+
   .section-title {
     margin-bottom: 80px;
     color: $whiteMain;
+
+    @include for-fablet {
+      margin-bottom: 56px;
+    }
   }
 
   &-catalog {
@@ -424,6 +618,68 @@
     box-sizing: border-box;
     justify-content: flex-start;
     align-items: stretch;
+
+    @include for-fablet {
+      display: block;
+    }
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+
+      li {
+        margin: 0 16px;
+
+        button {
+          position: relative;
+          display: flex;
+          box-sizing: border-box;
+          justify-content: center;
+          align-items: center;
+          height: 27px;
+          width: 27px;
+          padding: 0;
+          margin: 0;
+          border: 1px solid $textGray;
+          border-radius: 50%;
+          color: transparent;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            background-color: $textGray;
+          }
+
+          &:hover {
+            border-color: $textGray3;
+
+            &:before {
+              background-color: $textGray3;
+            }
+          }
+        }
+
+        &.slick-active {
+          button {
+            height: 39px;
+            width: 39px;
+            border-color: $blue;
+
+            &:before {
+              background-color: $blue;
+            }
+          }
+        }
+      }
+    }
   }
 
   &-item {
@@ -436,6 +692,28 @@
 
     &:last-child {
       border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+      @include for-fablet {
+        border: none;
+      }
+    }
+
+    @include for-fablet {
+      border: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    @include for-phone {
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
     }
   }
 
@@ -443,6 +721,10 @@
     display: block;
     width: auto;
     margin-bottom: 40px;
+
+    @include for-fablet {
+      margin: 0 auto 24px;
+    }
   }
 
   &-title {
@@ -453,6 +735,11 @@
     line-height: 135%;
     text-transform: uppercase;
     color: $whiteMain;
+
+    @include for-fablet {
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
 
   &-desc {
@@ -461,6 +748,12 @@
     line-height: 150%;
     /* or 22px */
     color: $blueText;
+
+    @include for-fablet {
+      text-align: center;
+      max-width: 303px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -469,6 +762,14 @@
   box-sizing: border-box;
   padding: 88px 0 175px;
   background-color: $bgGray;
+
+  @include for-tablet {
+    padding: 56px 0 88px;
+  }
+
+  @include for-phone {
+    padding: 56px 0;
+  }
 
   &:after {
     content: '';
@@ -493,6 +794,10 @@
     align-items: center;
     margin-top: 50px;
     margin-bottom: 88px;
+
+    @include for-tablet {
+      margin-bottom: 56px;
+    }
 
     li {
       margin: 0 16px;
@@ -550,10 +855,18 @@
     box-sizing: border-box;
     max-width: 1300px;
     padding: 20px;
+
+    @include for-tablet {
+      padding: 0;
+    }
   }
 
   .section-title {
     margin-bottom: 48px;
+
+    @include for-phone {
+      margin-bottom: 24px;
+    }
   }
 
   &-slider {
@@ -580,6 +893,14 @@
 
         .reviews-link {
           text-decoration: none;
+        }
+      }
+
+      @include for-tablet {
+        padding: 24px 24px 32px;
+
+        &:hover {
+          box-shadow: none;
         }
       }
     }
@@ -630,6 +951,10 @@
     color: $blackMain;
     flex-shrink: 0;
     letter-spacing: -0.1px;
+
+    @include for-tablet {
+      font-weight: $normal;
+    }
 
     @include for-bigPhone {
       font-weight: 500;
@@ -776,6 +1101,16 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @include for-tablet {
+      margin: 0 auto;
+      text-align: center;
+      justify-content: center;
+
+      svg {
+        display: none;
+      }
     }
   }
 }

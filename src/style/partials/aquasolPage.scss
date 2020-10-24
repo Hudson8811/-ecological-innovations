@@ -11,6 +11,10 @@
 
   .section-title {
     margin-bottom: 40px;
+
+    @include for-phone {
+      margin-bottom: 24px;
+    }
   }
 
   &-block {
@@ -20,6 +24,11 @@
     flex-wrap: wrap;
     margin-top: 40px;
     margin-bottom: -32px;
+
+    @include for-phone {
+      display: block;
+      margin-bottom: -24px;
+    }
   }
 
   &-item {
@@ -28,11 +37,17 @@
     align-items: flex-start;
     width: calc(50% - 20px);
     margin-bottom: 32px;
+
+    @include for-phone {
+      width: 100%;
+      margin-bottom: 24px;
+    }
   }
 
   &-icon {
     display: block;
     margin-right: 10px;
+    flex-shrink: 0;
   }
 
   &-text {
@@ -52,11 +67,23 @@
   margin-top: 56px;
   margin-bottom: -20px;
 
+  @include for-phone {
+    display: block;
+  }
+
   &-item {
     display: block;
     width: calc(50% - 10px);
     object-fit: cover;
     margin-bottom: 20px;
+
+    @include for-phone {
+      width: 100%;
+
+      &:nth-child(n + 3) {
+        display: none;
+      }
+    }
   }
 
   &-logo {
@@ -91,8 +118,16 @@
 .numbers {
   margin-top: 80px;
 
+  @include for-phone {
+    margin-top: 48px;
+  }
+
   .section-title {
     margin-bottom: 56px;
+
+    @include for-phone {
+      margin-bottom: 24px;
+    }
   }
 
   &-block {
@@ -101,6 +136,11 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: -72px;
+
+    @include for-phone {
+      display: block;
+      margin-bottom: -32px;
+    }
   }
 
   &-item {
@@ -111,6 +151,17 @@
     margin-right: 77px;
     margin-bottom: 72px;
     border-top: 1px solid $borderGray;
+
+    @include for-phone {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 32px;
+
+      &:first-child {
+        padding-top: 10px;
+        border-top: none;
+      }
+    }
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -129,6 +180,10 @@
   &-bit-text {
     font-weight: $medium;
     font-size: $bannerPagSize4;
+
+    @include for-phone {
+      font-size: $bannerPagSize5;
+    }
   }
 
   &-desc {
@@ -138,11 +193,19 @@
     font-size: $smallSize;
     line-height: 150%;
     color: $blackMain;
+
+    @include for-phone {
+      margin-top: 16px;
+    }
   }
 }
 
 .compare {
   margin-top: 80px;
+
+  @include for-phone {
+    display: none;
+  }
 
   .section-title {
     margin: 80px 0 40px;

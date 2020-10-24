@@ -31,8 +31,12 @@
 .pages-page {
   .section-title {
     max-width: 860px;
-    margin: 24px 0 56px;
+    margin: 24px 0 0;
     font-size: $bannerPagSize1;
+
+    @include for-bigPhone {
+      font-size: $textHeadingSize;
+    }
   }
   .bread_crumbs-wrapper {
     .container {
@@ -40,9 +44,19 @@
       justify-content: space-between;
       align-items: flex-start;
 
+      @include for-tablet {
+        display: block;
+      }
+
       .bread_crumbs {
         align-items: flex-start;
         max-width: calc(90% - 380px);
+
+        @include for-tablet {
+          max-width: 100%;
+          margin-bottom: 20px;
+          flex-wrap: wrap;
+        }
 
         &-item:not(:last-child) {
           flex-shrink: 0;
@@ -74,6 +88,11 @@
     box-sizing: border-box;
     width: calc(100% - 355px);
     padding-right: 40px;
+
+    @include for-fablet {
+      width: 100%;
+      padding-right: 0;
+    }
   }
 
   &-sidebar {
@@ -81,6 +100,10 @@
     width: 315px;
     padding: 32px 24px;
     background-color: $whiteMain;
+
+    @include for-fablet {
+      display: none;
+    }
 
     &-heading {
       display: block;

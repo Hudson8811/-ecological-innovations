@@ -9,6 +9,10 @@
 .map {
   width: 55%;
 
+  @include for-bigPhone {
+    display: none;
+  }
+
   &-block {
     padding-top: 48px;
 
@@ -20,15 +24,28 @@
       padding: 32px 24px;
       margin-top: 48px;
       background-color: $whiteMain;
+
+      @include for-bigPhone {
+        padding: 24px 16px;
+        margin-top: 24px;
+      }
     }
   }
 
   &-info {
     width: 45%;
 
+    @include for-bigPhone {
+      width: 100%;
+    }
+
     &-block {
       & + & {
         margin-top: 40px;
+
+        @include for-bigPhone {
+          margin-top: 32px;
+        }
       }
     }
 
@@ -80,6 +97,10 @@
 .representative {
   margin-top: 80px;
 
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
+
   &-wrap {
     display: flex;
     justify-content: flex-start;
@@ -99,6 +120,29 @@
     background-color: $whiteMain;
 
     &:nth-child(3n) {
+      margin-right: 0;
+
+      @include for-tablet {
+        margin-right: 20px;
+
+        @include for-bigPhone {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @include for-tablet {
+      width: calc(50% - 10px);
+      padding: 24px 16px;
+      margin-right: 20px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include for-bigPhone {
+      width: 100%;
       margin-right: 0;
     }
   }
@@ -143,6 +187,10 @@
     justify-content: flex-start;
     align-items: flex-start;
 
+    @include for-tablet {
+      display: block;
+    }
+
     .map-info-link {
       font-weight: $bold;
     }
@@ -150,6 +198,11 @@
     .map-info-block + .map-info-block {
       margin-top: 0;
       margin-left: 25px;
+
+      @include for-tablet {
+        margin-left: 0;
+        margin-top: 24px;
+      }
     }
   }
 }
@@ -158,11 +211,24 @@
   padding-bottom: 120px;
   margin-top: 80px;
 
+  @include for-bigPhone {
+    margin-top: 48px;
+    padding-bottom: 48px;
+  }
+
   &-wrap {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
     margin-top: 48px;
+
+    @include for-fablet {
+      display: block;
+    }
+
+    @include for-bigPhone {
+      margin-top: 24px;
+    }
   }
 
   &-content {
@@ -171,6 +237,11 @@
     width: 66%;
     padding: 32px 107px 32px 24px;
     background-color: $whiteMain;
+
+    @include for-fablet {
+      width: 100%;
+      padding: 24px 16px;
+    }
   }
 
   &-item {
@@ -180,6 +251,10 @@
     align-items: stretch;
     padding-bottom: 20px;
     border-bottom: 1px solid $tag;
+
+    @include for-phone {
+      display: block;
+    }
 
     &:last-child {
       padding: 0;
@@ -201,6 +276,16 @@
     line-height: 135%;
     color: $textGray2;
     flex-shrink: 0;
+
+    @include for-fablet {
+      padding-right: 20px;
+    }
+
+    @include for-phone {
+      max-width: none;
+      padding-right: 0;
+      margin-bottom: 16px;
+    }
   }
 
   &-desc {
@@ -225,6 +310,12 @@
     margin-left: auto;
     background-color: $whiteMain;
 
+    @include for-fablet {
+      width: 100%;
+      margin-top: 24px;
+      padding: 24px 16px;
+    }
+
     &-link {
       display: flex;
       box-sizing: border-box;
@@ -233,6 +324,12 @@
       padding-bottom: 32px;
       text-decoration: none;
       border-bottom: 1px solid $tag;
+
+      @include for-fablet {
+        width: 100%;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+      }
 
       &:last-child {
         padding-bottom: 0;

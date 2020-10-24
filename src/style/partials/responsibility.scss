@@ -1,10 +1,18 @@
 .resp {
+  &-page {
+    background-color: $whiteMain;
+  }
+
   &-wrap {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 32px;
     padding-bottom: 120px;
+
+    @include for-tablet {
+      display: block;
+    }
   }
 
   &-sidebar {
@@ -14,6 +22,10 @@
     margin-right: 20px;
     background-color: $whiteMain;
     flex-shrink: 0;
+
+    @include for-tablet {
+      display: none;
+    }
 
     &-title {
       display: block;
@@ -83,6 +95,12 @@
     padding: 40px 40px 65px;
     background-color: $whiteMain;
 
+    @include for-tablet {
+      width: 100%;
+
+      padding: 0;
+    }
+
     .section-title {
       margin-bottom: 24px;
     }
@@ -95,6 +113,10 @@
     align-items: stretch;
     padding: 24px 0;
     border-bottom: 1px solid $borderGray;
+
+    @include for-fablet {
+      display: block;
+    }
 
     &:last-child {
       padding-bottom: 0;
@@ -120,6 +142,10 @@
     &-wrapper {
       height: 100%;
       width: 303px;
+
+      @include for-fablet {
+        width: 100%;
+      }
     }
   }
 
@@ -131,10 +157,19 @@
     line-height: 150%;
     color: $blackMain;
 
+    @include for-fablet {
+      max-width: none;
+      width: 100%;
+    }
+
     &-wrapper {
       box-sizing: border-box;
       width: 100%;
       padding-left: 32px;
+
+      @include for-fablet {
+        padding-left: 0;
+      }
     }
 
     &-heading {
@@ -142,6 +177,11 @@
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 24px;
+
+      @include for-fablet {
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
     }
 
     &-title {
@@ -153,6 +193,12 @@
       line-height: 135%;
       text-decoration: none;
       color: $blackMain;
+
+      @include for-fablet {
+        width: 100%;
+        max-width: none;
+        font-size: $descSize;
+      }
     }
 
     &-date {
@@ -163,6 +209,11 @@
       line-height: 150%;
       color: $textGray2;
       text-decoration: none;
+
+      @include for-fablet {
+        order: -1;
+        margin-bottom: 10px;
+      }
     }
   }
 }

@@ -1,6 +1,10 @@
 .spheres {
   margin-top: 80px;
 
+  @include for-phone {
+    margin-top: 48px;
+  }
+
   &-block {
     display: flex;
     justify-content: space-between;
@@ -9,6 +13,12 @@
     padding-bottom: 80px;
     margin-top: 48px;
     margin-bottom: -20px;
+
+    @include for-phone {
+      display: block;
+      padding-bottom: 64px;
+      margin-top: 0;
+    }
   }
 
   &-item {
@@ -16,6 +26,10 @@
     height: 228px;
     width: calc(50% - 10px);
     margin-bottom: 20px;
+
+    @include for-phone {
+      width: 100%;
+    }
   }
 
   &-img {
@@ -40,11 +54,27 @@
     font-weight: $medium;
     line-height: 150%;
     color: $whiteMain;
+
+    @include for-phone {
+      width: 100%;
+      padding: 16px;
+    }
   }
 }
 
 .aquasol_two-page {
   .aquasol-how_do {
     margin-top: 0;
+  }
+
+  .h-title-block {
+    .container {
+      padding: 130px 0 200px;
+
+      .h-title-abs_logo {
+        top: 0;
+        left: 0;
+      }
+    }
   }
 }

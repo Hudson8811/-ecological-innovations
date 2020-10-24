@@ -347,7 +347,7 @@
 
     @include for-bigPhone {
       display: block;
-      margin-bottom: -16px;
+      margin-bottom: 0;
     }
   }
 
@@ -360,6 +360,10 @@
     @include for-bigPhone {
       width: 100%;
       margin-bottom: 16px;
+
+      &--active {
+        display: none;
+      }
     }
 
     &:nth-child(3n) {
@@ -596,6 +600,10 @@
     position: relative;
     height: 190px;
     margin: 0 10px;
+
+    @include for-bigPhone {
+      height: 168px;
+    }
   }
 
   &-img {

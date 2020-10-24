@@ -1,11 +1,31 @@
 .career {
+  &-page {
+    @include for-tablet {
+      background-color: $whiteMain;
+    }
+  }
+
   &-item {
     .resp-text-heading {
       margin-bottom: 0;
+
+      @include for-fablet {
+        flex-direction: row;
+
+        .resp-text-date {
+          order: 1;
+          margin-top: 0;
+        }
+      }
     }
 
     .resp-text-title {
       max-width: 500px;
+
+      @include for-fablet {
+        max-width: 203px;
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -18,6 +38,10 @@
     font-size: $smallSize;
     line-height: 135%;
     color: $blue;
+
+    @include for-fablet {
+      margin-bottom: 18px;
+    }
 
     &:before {
       content: '';
@@ -35,8 +59,16 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    @include for-fablet {
+      display: block;
+    }
+
     .resp-text {
       max-width: 500px;
+
+      @include for-fablet {
+        max-width: none;
+      }
     }
   }
 
@@ -54,6 +86,10 @@
     text-decoration: none;
     color: $whiteMain;
     background-color: $blue;
+
+    @include for-fablet {
+      margin-top: 32px;
+    }
   }
 }
 
@@ -64,6 +100,10 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: -40px;
+
+    @include for-bigPhone {
+      margin-bottom: -16px;
+    }
   }
 
   &-item {
@@ -73,6 +113,20 @@
 
     &:nth-child(3n) {
       margin-right: 0;
+
+      @include for-bigPhone {
+        margin-right: 16px;
+      }
+    }
+
+    @include for-bigPhone {
+      width: calc(50% - 8px);
+      margin-right: 16px;
+      margin-bottom: 16px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -80,6 +134,10 @@
     display: block;
     width: 100%;
     margin-bottom: 24px;
+
+    @include for-bigPhone {
+      margin-bottom: 16px;
+    }
   }
 
   &-name {
@@ -88,6 +146,16 @@
     font-weight: $medium;
     font-size: $descSize;
     line-height: 135%;
+
+    @include for-bigPhone {
+      font-size: $mainSize;
+    }
+  }
+
+  &-pos {
+    @include for-bigPhone {
+      font-size: $smallSize;
+    }
   }
 
   &-desc {
@@ -96,5 +164,16 @@
     font-size: $smallSize;
     line-height: 135%;
     color: $textGray2;
+  }
+}
+
+.scope-more.scope-more--light_green {
+  color: $lightGreen;
+  border-color: $lightGreen;
+}
+
+.us-page {
+  @include for-tablet {
+    background-color: $whiteMain;
   }
 }

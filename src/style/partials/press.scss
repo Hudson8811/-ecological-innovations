@@ -6,6 +6,11 @@
   padding-bottom: 120px;
   margin-bottom: -20px;
 
+  @include for-phone {
+    display: block;
+    padding-bottom: 48px;
+  }
+
   &-item {
     display: flex;
     box-sizing: border-box;
@@ -16,6 +21,15 @@
     margin-bottom: 20px;
 
     &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    @include for-fablet {
+      display: block;
+    }
+
+    @include for-phone {
+      width: 100%;
       margin-right: 0;
     }
   }
@@ -30,6 +44,11 @@
       height: 100%;
       width: 32.7%;
       flex-shrink: 0;
+
+      @include for-fablet {
+        height: 177px;
+        width: 100%;
+      }
     }
   }
 
@@ -67,6 +86,10 @@
       font-size: $smallSize;
       line-height: 135%;
       color: $textGray2;
+
+      @include for-fablet {
+        margin-bottom: 10px;
+      }
     }
   }
 }

@@ -1,10 +1,19 @@
 .documents-page {
   .section-title {
     margin-top: 48px;
+
+    @include for-phone {
+      margin-top: 40px;
+    }
   }
 
   .filters {
     margin: 56px 0;
+
+    @include for-phone {
+      width: 100%;
+      margin: 32px 0;
+    }
   }
 }
 
@@ -15,6 +24,10 @@
   flex-wrap: wrap;
   margin-bottom: -20px;
   padding-bottom: 120px;
+
+  @include for-phone {
+    padding-bottom: 48px;
+  }
 
   &-item {
     position: relative;
@@ -32,6 +45,24 @@
 
     &:nth-child(4n) {
       margin-right: 0;
+
+      @include for-tablet {
+        margin-right: 20px;
+      }
+
+      @include for-phone {
+        margin-right: 0;
+      }
+    }
+
+    @include for-tablet {
+      min-width: 290px;
+      height: auto;
+    }
+
+    @include for-phone {
+      width: 100%;
+      margin-right: 0;
     }
   }
 
@@ -48,6 +79,10 @@
     font-size: $smallSize;
     line-height: 135%;
     color: $blackMain;
+
+    @include for-tablet {
+      padding-bottom: 24px;
+    }
   }
 
   &-mark {

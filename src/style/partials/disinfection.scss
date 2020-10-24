@@ -15,6 +15,10 @@
     align-items: stretch;
     padding: 0;
 
+    @include for-tablet {
+      display: block;
+    }
+
     .calc-form-content {
       display: flex;
       box-sizing: border-box;
@@ -23,6 +27,11 @@
       flex-wrap: wrap;
       width: calc(100% - 401px);
       padding: 48px 68px 40px 40px;
+
+      @include for-tablet {
+        width: 100%;
+        padding: 24px 16px;
+      }
     }
 
     .calc-form-sum-count {
@@ -48,8 +57,22 @@
         justify-content: flex-start;
         align-items: flex-start;
 
+        @include for-tablet {
+          display: block;
+          margin-bottom: 0;
+
+          .calc-form-sum {
+            font-size: $descSize;
+          }
+        }
+
         .calc-form-sum + .calc-form-sum {
           margin-left: 32px;
+
+          @include for-tablet {
+            margin-left: 0;
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -59,6 +82,11 @@
       width: 401px;
       padding: 54px 54px 48px 51px;
       background-color: $tag;
+
+      @include for-tablet {
+        width: 100%;
+        padding: 40px 23px 40px 16px;
+      }
     }
   }
 }
@@ -66,6 +94,10 @@
 .sed_ut-block--w33 {
   .sed_ut-item {
     width: calc(33.333% - 138px / 3);
+
+    @include for-bigPhone {
+      width: 100%;
+    }
   }
 }
 
@@ -73,6 +105,22 @@
   .app_horizon-catalog {
     .app_horizon-item {
       width: calc(25% - 60px / 4);
+
+      @include for-bigPhone {
+        width: 100%;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 20px;
+
+        @include for-bigPhone {
+          margin-right: 0;
+        }
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -80,8 +128,24 @@
 .types_disinf {
   margin-top: 80px;
 
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
+
+  .reports-tools {
+    display: none;
+
+    @include for-fablet {
+      display: flex;
+    }
+  }
+
   .section-title {
     margin-bottom: 48px;
+
+    @include for-bigPhone {
+      margin-bottom: 24px;
+    }
   }
 
   &-block {
@@ -143,12 +207,21 @@
   align-items: flex-start;
   padding: 56px 208px 86px 64px;
 
+  @include for-tablet {
+    display: block;
+    padding: 24px 30px 40px 16px;
+  }
+
   &-list {
     position: absolute;
     top: 0;
     right: 0;
     display: block;
     max-width: 201px;
+
+    @include for-tablet {
+      max-width: 125px;
+    }
   }
 
   &-text {
@@ -159,18 +232,32 @@
     font-size: $descSize;
     line-height: 150%;
     color: $whiteMain;
+
+    @include for-tablet {
+      padding-top: 0;
+      font-size: $mainSize;
+    }
   }
 
   &-logos {
     width: 261px;
     margin-right: 80px;
     flex-shrink: 0;
+
+    @include for-tablet {
+      max-width: 178px;
+      margin-right: 0;
+    }
   }
 
   &-logo {
     display: block;
     width: 100%;
     margin-bottom: 54px;
+
+    @include for-tablet {
+      margin-bottom: 24px;
+    }
   }
 
   &-link {
@@ -181,6 +268,10 @@
     line-height: 150%;
     text-decoration-line: underline;
     color: $whiteMain;
+
+    @include for-tablet {
+      display: none;
+    }
   }
 }
 
@@ -190,23 +281,52 @@
   align-items: stretch;
   margin-top: 32px;
 
+  @include for-bigPhone {
+    display: block;
+  }
+
   .how_desc {
     width: calc(50% - 10px);
     margin-top: 0;
+
+    @include for-bigPhone {
+      width: 100%;
+      margin-top: 16px;
+    }
   }
 }
 
 .reports-big {
   .reports-item {
     height: 294px;
+
+    @include for-bigPhone {
+      height: 168px;
+    }
   }
 }
 
 .develop {
   margin-top: 80px;
 
+  .reports-tools {
+    display: none;
+
+    @include for-bigPhone {
+      display: flex;
+    }
+  }
+
+  @include for-bigPhone {
+    margin-top: 48px;
+  }
+
   .section-title {
     margin-bottom: 72px;
+
+    @include for-bigPhone {
+      margin-bottom: 24px;
+    }
   }
 
   &-catalog {
@@ -215,6 +335,14 @@
     align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: -56px;
+
+    & + & {
+      margin-top: 56px;
+
+      @include for-bigPhone {
+        margin-top: 0;
+      }
+    }
   }
 
   &-item {
@@ -223,6 +351,13 @@
     padding-right: 11%;
     margin-right: auto;
     margin-bottom: 56px;
+
+    @include for-bigPhone {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+    }
   }
 
   &-icon {
@@ -234,6 +369,13 @@
     margin-bottom: 32px;
     border-radius: 50%;
     background-color: $lightGreen;
+
+    @include for-bigPhone {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      margin-right: 16px;
+    }
   }
 
   &-title {
@@ -243,6 +385,10 @@
     font-size: $descSize;
     line-height: 150%;
     color: $blackMain;
+
+    @include for-bigPhone {
+      font-size: $mainSize;
+    }
   }
 
   &-desc {
@@ -256,5 +402,11 @@
 .reviews-horizon--w33 {
   .reviews-slider-item {
     width: calc(33.333% - 40px / 3);
+  }
+
+  @include for-fablet {
+    .reviews-slider-item {
+      padding: 24px;
+    }
   }
 }
