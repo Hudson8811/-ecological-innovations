@@ -27,7 +27,10 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 /* my scripts */
 
 $(document).ready(function () {
-    
+
+    $('[data-fancybox]').fancybox({
+        backFocus : false,
+      });
     // Инициализация слайдера баннера!
     $('.banner-slider').slick({
         infinite: true,
@@ -54,8 +57,8 @@ $(document).ready(function () {
             bannerVideoPositionSet('.banner-video')
         })
     }
-    
-    
+
+
     // Бг баннера!
 
     // Тулзы баннера!
@@ -81,14 +84,14 @@ $(document).ready(function () {
             width: `${btnOffset}px`,
         })
     }
-    
+
     if($('body').hasClass('index-page')){
         aboutBgPositionSet()
         $(window).resize(function(){
             aboutBgPositionSet()
         })
     }
-    
+
 
     function aboutLinePositionSet(aboutLinePositionItem){
         const btnOffset = $('.banner-tools-btns-next--js').offset().left
@@ -158,7 +161,7 @@ $(document).ready(function () {
                 breakpoint: 690,
                 settings: {
                   slidesToShow: 1,
-                  slidesToScroll: 1, 
+                  slidesToScroll: 1,
                   dots: true,
                 }
               },
@@ -182,17 +185,20 @@ $(document).ready(function () {
     })
 
     $('.category-link').click(function(e){
-        e.preventDefault()
-        const $this = $(this)
-        if(!$this.hasClass('category-link--active')){
-            $('.category-link').removeClass('category-link--active')
-            $('.sub_category').slideUp()
-            $this.addClass('category-link--active')
-            $this.siblings('.sub_category').slideDown()
-        } else{
-            $this.removeClass('category-link--active')
-            $this.siblings('.sub_category').slideUp()
+        if((!$(this).attr('href').length>0) || $(this).attr('href')=="#"){
+            e.preventDefault()
+            const $this = $(this)
+            if(!$this.hasClass('category-link--active')){
+                $('.category-link').removeClass('category-link--active')
+                $('.sub_category').slideUp()
+                $this.addClass('category-link--active')
+                $this.siblings('.sub_category').slideDown()
+            } else{
+                $this.removeClass('category-link--active')
+                $this.siblings('.sub_category').slideUp()
+            }
         }
+
     })
     // Sidebar!
 
@@ -200,16 +206,16 @@ $(document).ready(function () {
     $('.reports-slider').slick({
         infinite: false,
         autoplay: false,
-        slidesToShow: 4, 
+        slidesToShow: 4,
         slidesToScroll: 4,
         arrows:false,
-        dots: false, 
+        dots: false,
         responsive: [
             {
               breakpoint: 690,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2, 
+                slidesToScroll: 2,
               }
             },
           ]
@@ -221,7 +227,7 @@ $(document).ready(function () {
             e.preventDefault()
             $('.reports-slider').slick("slickNext")
         })
-    
+
         $('.reports .reports-arrow-prev').click(function(e){
             e.preventDefault()
             $('.reports-slider').slick("slickPrev")
@@ -250,9 +256,9 @@ $(document).ready(function () {
         $(window).resize(function(){
             reportsSliderControls()
         })
-        
+
         // Тулзы слайдера отчетов!
-    
+
         // Видео!
         $(document).on('click', '.reports-play', function(e){
             e.preventDefault()
@@ -260,7 +266,7 @@ $(document).ready(function () {
             let src = $this.parent('.reports-placeholder').siblings('.reports-video').attr('src')
             $this.parent('.reports-placeholder').addClass('reports-placeholder--hidden')
             $this.parent('.reports-placeholder').siblings('.reports-video').attr('src', `${src}?autoplay=1`)
-            
+
         })
         // Видео!
 
@@ -291,7 +297,7 @@ $(document).ready(function () {
             e.preventDefault()
             $('.scope-slider').slick("slickNext")
         })
-    
+
         $('.scope .reports-arrow-prev').click(function(e){
             e.preventDefault()
             $('.scope-slider').slick("slickPrev")
@@ -385,7 +391,7 @@ $(document).ready(function () {
         // Поиск!
 
         // Меню!
-        $('.header-menu-link').click(function(e){
+        $('.header-menu-link[data-id]').click(function(e){
             const $this = $(this)
             e.preventDefault()
             if(!$this.hasClass('header-menu-link--active')){
@@ -440,9 +446,9 @@ $(document).ready(function () {
             slidesToShow: 2,
             slidesToScroll: 2,
             arrows:false,
-            dots:false,        
+            dots:false,
             responsive: [
-    
+
                 {
                     breakpoint: 690,
                     settings: {
@@ -460,9 +466,9 @@ $(document).ready(function () {
             slidesToShow: 3,
             slidesToScroll: 3,
             arrows:false,
-            dots:false,        
+            dots:false,
             responsive: [
-    
+
                 {
                     breakpoint: 690,
                     settings: {
@@ -481,12 +487,12 @@ $(document).ready(function () {
                     e.preventDefault()
                     $('.reviews-horizon-block').slick("slickNext")
                 })
-            
+
                 $('.reviews-horizon .reports-arrow-prev').click(function(e){
                     e.preventDefault()
                     $('.reviews-horizon-block').slick("slickPrev")
                 })
-        
+
                 const lengthReviewsSlides =$('.reviews-slider-item').length
                 $('.reviews-horizon  .reports-pag-count_all').text(lengthReviewsSlides)
                 $('.reviews-horizon ').on('beforeChange', function(event, slick, currentSlide, nextSlide){
@@ -497,7 +503,7 @@ $(document).ready(function () {
         // Мобильные отзывы!
 
 // Типы!
-        
+
 
         const lengthTypesSlides = $('.types_disinf-item').length
         $('.types_disinf .reports-pag-count_all').text(lengthTypesSlides)
@@ -510,7 +516,7 @@ $(document).ready(function () {
             e.preventDefault()
             $('.types_disinf-block').slick("slickNext")
         })
-    
+
         $('.types_disinf .reports-arrow-prev').click(function(e){
             e.preventDefault()
             $('.types_disinf-block').slick("slickPrev")
@@ -591,7 +597,7 @@ $(window).resize(function(){
                 slidesToScroll: 1,
                 arrows:false,
                 dots: true,
-                
+
             });
         } else{
             $('.priorities-catalog').slick('unslick')

@@ -20,11 +20,20 @@
     right: 0;
     display: block;
     height: 1px;
-    width: calc(100vw - (100vw - 1385px) / 2 - 177px);
+    width: calc((100vw - 1240px) / 2 + 1200px);
     background-color: $borderGray;
+
+    @media (max-width: 1530px) {
+      width: calc((100vw - 1240px) / 2 + 1077px);
+    }
+
+    @media (max-width: 1340px) {
+      width: calc(100vw - 40px - 145px - 10px);
+    }
 
     @include for-tablet {
       top: 61px;
+      width: 100%;
     }
   }
 
@@ -339,6 +348,7 @@
     &--inst {
       &:hover {
         background: center / cover url(../img/inst-icon.png) no-repeat;
+
         .header-social-svg {
           opacity: 0;
         }
@@ -439,6 +449,7 @@
       cursor: pointer;
 
       svg {
+
         path,
         circle {
           stroke: $blackMain;
@@ -447,6 +458,7 @@
 
       &:hover {
         svg {
+
           path,
           circle {
             stroke: $blue;
@@ -648,7 +660,7 @@
       width: 100%;
     }
 
-    & + & {
+    &+& {
       border-left: 0;
     }
 
